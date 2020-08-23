@@ -1,0 +1,20 @@
+html * {
+  font-family: "Hiragino Sans"; 
+  font-weight: 500;
+  font-style: normal;
+  color: #000000;
+}
+p {
+  font-size: 16px;
+  line-height: 2.0em;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20px;
+}
