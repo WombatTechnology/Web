@@ -3,7 +3,8 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, ContainerWidth } from "../style"
+import { Colors, ContainerWidth } from "../../style"
+import ScrollIntoView from 'react-scroll-into-view'
 
 const Header = () => {
   const { headerLogo } = useStaticQuery(graphql`
@@ -22,9 +23,15 @@ const Header = () => {
       <Container>
         <Img fixed={headerLogo.childImageSharp.fixed} />
         <MenuLinks>
-          <MenuLink>ABOUT</MenuLink>
-          <MenuLink>SERVICE</MenuLink>
-          <MenuLink>WORKS</MenuLink>
+          <ScrollIntoView selector="#about">
+            <MenuLink>ABOUT</MenuLink>
+          </ScrollIntoView>
+          <ScrollIntoView selector="#service">
+            <MenuLink>SERVICE</MenuLink>
+          </ScrollIntoView>
+          <ScrollIntoView selector="#works">
+            <MenuLink>WORKS</MenuLink>
+          </ScrollIntoView>
           <MenuLink>COMPANY</MenuLink>
           <MenuLink>CONTACT</MenuLink>
         </MenuLinks>

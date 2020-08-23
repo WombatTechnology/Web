@@ -10,9 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { ContainerWidth } from "../style"
-
-import Header from "./header"
+import Header from "./common/header"
+import Footer from "./common/footer"
 import "./layout.css"
+import Helmet from "react-helmet"
 
 interface Props {
   children: ReactNode
@@ -30,13 +31,12 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
+      <Helmet>
+        <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+      </Helmet>
       <Header />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-          {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </>
   )
 }

@@ -2,7 +2,8 @@ import styled from "@emotion/styled"
 
 export enum Colors {
   White = '#ffffff',
-  BaseGray = '#F8F8F8'
+  BaseGray = '#F8F8F8',
+  TextPlaceholder = '#959595'
 }
 
 export const Description = styled.p`

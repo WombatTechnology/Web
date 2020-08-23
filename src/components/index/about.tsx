@@ -18,7 +18,7 @@ const About = () => {
   }
 `)
   return (
-    <Section title="About" titleSupplement="わたしたちについて">
+    <Section id="about" title="About" titleSupplement="わたしたちについて">
       <InnerContainer>
         <Description>
           ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、

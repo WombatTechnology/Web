@@ -3,13 +3,14 @@ import styled from "@emotion/styled"
 import { ContainerWidth, Colors } from "../../style"
 
 interface Props {
+  id: string,
   children: React.ReactNode,
   title: string,
   titleSupplement: string
 }
-const Section = ({ children, title, titleSupplement }: Props) => {
+const Section = ({ id, children, title, titleSupplement }: Props) => {
   return (
-    <Container>
+    <Container id={id}>
       <TitleDiv>
         <Title>{title}</Title>
         <Supplement>{titleSupplement}</Supplement>

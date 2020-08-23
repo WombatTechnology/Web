@@ -32,7 +32,7 @@ const Service = () => {
   }
 `)
   return (
-    <Section title="Service" titleSupplement="サービス">
+    <Section id="service" title="Service" titleSupplement="サービス">
       <Description>
         言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。
           <br />

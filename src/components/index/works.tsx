@@ -7,7 +7,7 @@ import Section from './section'
 
 const Works = () => {
   return (
-    <Section title="Works" titleSupplement="実績">
+    <Section id="works" title="Works" titleSupplement="実績">
       <Description>
         言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。
           <br />
