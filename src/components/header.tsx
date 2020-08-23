@@ -10,7 +10,7 @@ const Header = () => {
   query {
     headerLogo: file(relativePath: { eq: "header-logo.png" }) {
       childImageSharp {
-        fixed(width: 200, height: 59) {
+        fixed(width: 200, height: 60) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -21,7 +21,6 @@ const Header = () => {
     <Background>
       <Container>
         <Img fixed={headerLogo.childImageSharp.fixed} />
-        <Spacer />
         <MenuLinks>
           <MenuLink>ABOUT</MenuLink>
           <MenuLink>SERVICE</MenuLink>
@@ -42,13 +41,11 @@ const Background = styled.header`
   display: flex;
   justify-content: center;
 `
-const Container = styled.div` 
+const Container = styled.nav`
+  min-width: ${ContainerSize};
   display: flex;
-  max-width: ${ContainerSize};
   align-items: center;
-`
-const Spacer = styled.div`
-  width: 173px;
+  justify-content: space-between;
 `
 const MenuLinks = styled.div`
   width: 608px;
