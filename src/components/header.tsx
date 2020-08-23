@@ -3,7 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, ContainerSize } from "../style"
+import { Colors, ContainerWidth } from "../style"
 
 const Header = () => {
   const { headerLogo } = useStaticQuery(graphql`
@@ -42,7 +42,7 @@ const Background = styled.header`
   justify-content: center;
 `
 const Container = styled.nav`
-  min-width: ${ContainerSize};
+  min-width: ${ContainerWidth};
   display: flex;
   align-items: center;
   justify-content: space-between;

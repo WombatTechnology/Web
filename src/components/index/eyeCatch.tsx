@@ -5,9 +5,9 @@ import styled from "@emotion/styled"
 import { Colors } from "../../style"
 
 const EyeCatch = () => {
-  const { headerLogo } = useStaticQuery(graphql`
+  const { mainLogo } = useStaticQuery(graphql`
   query {
-    headerLogo: file(relativePath: { eq: "main-logo.png" }) {
+    mainLogo: file(relativePath: { eq: "main-logo.png" }) {
       childImageSharp {
         fixed(width: 279, height: 281) {
           ...GatsbyImageSharpFixed
@@ -18,7 +18,7 @@ const EyeCatch = () => {
 `)
   return (
     <Background>
-      <Img fixed={headerLogo.childImageSharp.fixed} />
+      <Img fixed={mainLogo.childImageSharp.fixed} />
       <Message>日々の悩みをテクノロジーの力で解決する</Message>
     </Background>
   )
