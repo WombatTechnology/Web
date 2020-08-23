@@ -32,8 +32,12 @@ const Header = () => {
           <ScrollIntoView selector="#works">
             <MenuLink>WORKS</MenuLink>
           </ScrollIntoView>
-          <MenuLink>COMPANY</MenuLink>
-          <MenuLink>CONTACT</MenuLink>
+          <ScrollIntoView selector="#company">
+            <MenuLink>COMPANY</MenuLink>
+          </ScrollIntoView>
+          <ScrollIntoView selector="#contact">
+            <MenuLink>CONTACT</MenuLink>
+          </ScrollIntoView>
         </MenuLinks>
       </Container>
     </Background>

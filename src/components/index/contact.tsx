@@ -55,7 +55,7 @@ const Contact = () => {
 
 const FormContainer = styled.section`
   width: 100%;
-  margin-top: 28px;
+  margin: 28px auto;
   border-radius: 16px;
   max-width: 600px;
 }

@@ -16,18 +16,6 @@ import styled from "@emotion/styled"
 
 const IndexPage = () => {
   const aboutRef = useRef(null)
-
-  const { scrollButton } = useStaticQuery(graphql`
-  query {
-    scrollButton: file(relativePath: { eq: "scroll.png" }) {
-      childImageSharp {
-        fixed(width: 46, height: 61) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`)
   return (
     <Layout>
       <EyeCatch />
@@ -35,9 +23,6 @@ const IndexPage = () => {
       <Service />
       <Works />
       <Contact />
-      <ScrollButton>
-        <Img fixed={scrollButton.childImageSharp.fixed} />
-      </ScrollButton>
     </Layout>
   )
 }
