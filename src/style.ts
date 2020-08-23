@@ -9,4 +9,15 @@ export const Description = styled.p`
   font-weight: 600;
   font-size: 20px;
 `
+export const SmallDescription = styled.p`
+  font-size: 14px;
+`
+export const SubTitle = styled.p`
+  font-weight: 600;
+  font-size: 20px;
+`
+export const Spacer = styled.div`
+  flex-grow: 1;
+`
+
 export const ContainerWidth = '980px'

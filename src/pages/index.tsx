@@ -6,6 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import EyeCatch from '../components/index/eyeCatch'
 import About from '../components/index/about'
+import Service from '../components/index/service'
 
 import '../globalStyle.css'
 import '../reset.css'
@@ -14,6 +15,7 @@ const IndexPage = () => (
   <Layout>
     <EyeCatch />
     <About />
+    <Service />
   </Layout>
 )
 
