@@ -22,7 +22,7 @@ const Section = ({ children, title, titleSupplement }: Props) => {
 const Container = styled.section`
   width: ${ContainerWidth};
   padding: 36px 72px;
-  margin: 60px auto 0 auto;
+  margin: 80px auto 0 auto;
   background-color: ${Colors.BaseGray};
 `
 
