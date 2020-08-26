@@ -5,7 +5,7 @@ import styled from "@emotion/styled"
 import { Colors, Description, SubTitle, SmallDescription, Spacer } from "../../style"
 import Section from './section'
 import './contact.css'
-import { ContactForm } from 'fire-form'
+import { ContactForm } from '@kazuwombat/fire-form'
 import config from '../../firebaseConfig'
 
 const Contact = () => {

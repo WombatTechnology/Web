@@ -1732,6 +1732,14 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@kazuwombat/fire-form@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@kazuwombat/fire-form/-/fire-form-1.0.0.tgz#ae32b35362312fe2f0d2a4559c104940a459a8f2"
+  integrity sha512-9N953/FoWrNhIGYFVLzsEQQNoysG1FR0TiXBtgt0gMw0bZiagqBcikzD9EnLB+0FI1gqd/LweB2wIGsZT0nS/g==
+  dependencies:
+    firebase "^7.19.0"
+    react-spinners "^0.9.0"
+
 "@mdx-js/mdx@^2.0.0-next.4", "@mdx-js/mdx@^2.0.0-next.7":
   version "2.0.0-next.7"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-2.0.0-next.7.tgz#3f27449e6a78ac0a9cc682f98e1c93442e93f166"
@@ -6468,12 +6476,6 @@ find-versions@^3.0.0:
   integrity sha512-P8WRou2S+oe222TOCHitLy8zj+SIsVJh52VP4lvXkaFVnOFFdoWv1H1Jjvel1aI6NCFOAaeAVm8qrI0odiLcww==
   dependencies:
     semver-regex "^2.0.0"
-
-"fire-form@file:/Users/matsumotokazuya/ghq/github.com/kazuooooo/fire-form":
-  version "1.0.0"
-  dependencies:
-    firebase "^7.19.0"
-    react-spinners "^0.9.0"
 
 firebase@^7.19.0:
   version "7.19.0"
