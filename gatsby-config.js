@@ -1,8 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `株式会社ウォンバットテクノロジー`,
+    titleTemplate: `株式会社ウォンバットテクノロジー - %s"`,
+    url: `https://wombat-tech.com`,
+    // TODO: OG差し替え
+    image: `https://s3-ap-northeast-1.amazonaws.com/app.apole.io/og_rect.png`,
+    description: `株式会社ウォンバットテクノロジーのホームページです。`,
+    social: {
+      twitter: `apole_scheduler`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

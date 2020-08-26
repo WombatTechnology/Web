@@ -13,27 +13,13 @@ import { ContainerWidth } from "../style"
 import Header from "./common/header"
 import Footer from "./common/footer"
 import "./layout.css"
-import Helmet from "react-helmet"
 
 interface Props {
   children: ReactNode
 }
 const Layout = ({ children }: Props) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Helmet>
-        <script src="https://sdk.form.run/js/v2/formrun.js"></script>
-      </Helmet>
       <Header />
       <main>{children}</main>
       <Footer />

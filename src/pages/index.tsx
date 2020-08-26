@@ -8,6 +8,7 @@ import About from '../components/index/about'
 import Service from '../components/index/service'
 import Works from '../components/index/works'
 import Contact from '../components/index/contact'
+import SEO from '../components/seo'
 import Img from "gatsby-image"
 
 import '../globalStyle.css'
@@ -18,6 +19,7 @@ const IndexPage = () => {
   const aboutRef = useRef(null)
   return (
     <Layout>
+      <SEO />
       <EyeCatch />
       <About />
       <Service />
