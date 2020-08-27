@@ -22,19 +22,19 @@ const Header = () => {
         <Img fruid={images().headerLogo.childImageSharp.fruid} />
         <MenuLinks>
           <ScrollIntoView selector="#about">
-            <MenuLink>ABOUT</MenuLink>
+            <MenuLink>About</MenuLink>
           </ScrollIntoView>
           <ScrollIntoView selector="#service">
-            <MenuLink>SERVICE</MenuLink>
+            <MenuLink>Service</MenuLink>
           </ScrollIntoView>
           <ScrollIntoView selector="#works">
-            <MenuLink>WORKS</MenuLink>
+            <MenuLink>Works</MenuLink>
           </ScrollIntoView>
           <ScrollIntoView selector="#company">
-            <MenuLink>COMPANY</MenuLink>
+            <MenuLink>Company</MenuLink>
           </ScrollIntoView>
           <ScrollIntoView selector="#contact">
-            <MenuLink>CONTACT</MenuLink>
+            <MenuLink>Contact</MenuLink>
           </ScrollIntoView>
         </MenuLinks>
         <SPMenu>

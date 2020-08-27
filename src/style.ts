@@ -55,5 +55,10 @@ export const Divider = styled.div`
   height: 1px;
   background-color: ${Colors.Border}
 `
+export const Heading = styled.p`
+  font-weight: 800;
+  font-size: 50px;
+  height: 75px;
+`
 
 export const ContainerWidth = '980px'

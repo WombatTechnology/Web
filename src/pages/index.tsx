@@ -9,12 +9,10 @@ import Works from '../components/index/works'
 import Contact from '../components/index/contact'
 import SEO from '../components/seo'
 import Img from "gatsby-image"
-
 import '../globalStyle.css'
 import '../reset.css'
 import styled from "@emotion/styled"
 import Company from "../components/index/company"
-
 
 const IndexPage = () => {
   return (
@@ -26,13 +24,16 @@ const IndexPage = () => {
       <Works />
       <Company />
       <Contact />
-    </Layout>
+    </Layout >
   )
 }
+
 const ScrollButton = styled.div`
 position: fixed;
 bottom: 0;
 right: 0;
 `
+
+
 
 export default IndexPage

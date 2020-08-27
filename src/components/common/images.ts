@@ -83,6 +83,20 @@ export const images = () => {
           }
         }
       }
+      thankyou: file(relativePath: { eq: "thankyou.png" }) {
+        childImageSharp {
+          fixed(width: 247, height: 299) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      close: file(relativePath: { eq: "close.png" }) {
+        childImageSharp {
+          fixed(width: 48, height: 48) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
   return images
