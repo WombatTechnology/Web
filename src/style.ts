@@ -1,9 +1,13 @@
 import styled from "@emotion/styled"
 
+export const mediaMaxWidth = '576px'
+
 export enum Colors {
   White = '#ffffff',
   BaseGray = '#F8F8F8',
-  TextPlaceholder = '#959595'
+  TextPlaceholder = '#959595',
+  TextGray = '#818181',
+  Border = "#DCDCDC"
 }
 
 export const Description = styled.p`
@@ -27,6 +31,29 @@ export const SubTitle_18_span = styled.span`
 `
 export const Spacer = styled.div`
   flex-grow: 1;
+`
+
+export const Text_14px_gray = styled.p`
+  font-weight: 600;
+  font-size: 14px;
+  color: ${Colors.TextGray};
+`
+
+export const Text_14px = styled.p`
+  font-weight: 600;
+  font-size: 14px;
+`
+
+export const BrForSp = styled.br`
+  display: none;
+  @media (max-width: ${mediaMaxWidth}) {
+    display: block;
+  }
+`
+
+export const Divider = styled.div`
+  height: 1px;
+  background-color: ${Colors.Border}
 `
 
 export const ContainerWidth = '980px'

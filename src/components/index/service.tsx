@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, Description, SubTitle, SmallDescription, Spacer } from "../../style"
+import { Colors, Description, SubTitle, SmallDescription, mediaMaxWidth } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
 
@@ -54,6 +54,18 @@ const Services = styled.section`
   margin-top: 53px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: ${mediaMaxWidth}) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+const Spacer = styled.div`
+  @media (min-width: ${mediaMaxWidth}) {
+    flex-grow: 1;
+  }
+  @media (max-width: ${mediaMaxWidth}) {
+    margin-top: 32px;
+  }
 `
 const ServiceItem = styled.div`
   display: flex;
@@ -61,6 +73,10 @@ const ServiceItem = styled.div`
   width: 202px;
   height: 297px;
   align-items: center;
+  @media (max-width: ${mediaMaxWidth}) {
+    margin-top: 100px;
+    height: 310px;
+  }
 `
 const ServiceItemTitle = styled.div`
 `

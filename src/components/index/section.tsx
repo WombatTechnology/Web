@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { ContainerWidth, Colors } from "../../style"
+import { ContainerWidth, Colors, mediaMaxWidth } from "../../style"
 
 interface Props {
   id: string,
@@ -21,10 +21,13 @@ const Section = ({ id, children, title, titleSupplement }: Props) => {
 }
 
 const Container = styled.section`
-  width: ${ContainerWidth};
+  max-width: ${ContainerWidth};
   padding: 36px 72px;
   margin: 80px auto 0 auto;
   background-color: ${Colors.BaseGray};
+  @media (max-width: ${mediaMaxWidth}) {
+    padding: 30px 24px;
+  }
 `
 
 const TitleDiv = styled.div`

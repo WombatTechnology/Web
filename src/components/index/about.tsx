@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, Description } from "../../style"
+import { Colors, Description, mediaMaxWidth } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
 
@@ -29,14 +29,22 @@ const About = () => {
 }
 
 const InnerContainer = styled.div`
-  position: relative;
-  height: 300px;
+  @media (max-width: ${mediaMaxWidth}) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @media (min-width: ${mediaMaxWidth}) {
+    position: relative;
+    height: 300px;
+  }
 `
 
 const ImageContainer = styled.div`
-position: absolute;
-right: -64px;
-bottom: -82px;
+  @media (min-width: ${mediaMaxWidth}) {
+    position: absolute;
+    right: -64px;
+    bottom: -82px;
+  }
 `
 
 export default About

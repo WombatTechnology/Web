@@ -57,6 +57,9 @@ export const images = () => {
           fixed(width: 240, height: 254) {
             ...GatsbyImageSharpFixed
           }
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
       sokkuri: file(relativePath: { eq: "works/sokkuri.png" }) {

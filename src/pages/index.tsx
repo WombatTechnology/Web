@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useState, useRef } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -15,8 +15,8 @@ import '../reset.css'
 import styled from "@emotion/styled"
 import Company from "../components/index/company"
 
+
 const IndexPage = () => {
-  const aboutRef = useRef(null)
   return (
     <Layout>
       <SEO />
@@ -34,6 +34,5 @@ position: fixed;
 bottom: 0;
 right: 0;
 `
-
 
 export default IndexPage

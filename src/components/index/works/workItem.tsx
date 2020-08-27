@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, Description, SubTitle, SmallDescription, Spacer } from "../../../style"
+import { Colors, Description, SubTitle, SmallDescription, Spacer, mediaMaxWidth } from "../../../style"
 
 interface WorkItemProps {
   id: string
@@ -30,6 +30,9 @@ const WorkItemContainer = styled.div`
   p {
     margin-top: 24px;
   };
+  @media (max-width: ${mediaMaxWidth}) {
+    margin-top: 66px;
+  }
 `
 
 const ImageContainer = styled.div`
