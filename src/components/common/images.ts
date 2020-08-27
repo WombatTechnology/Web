@@ -52,6 +52,13 @@ export const images = () => {
           }
         }
       }
+      company: file(relativePath: { eq: "company.png" }) {
+        childImageSharp {
+          fixed(width: 240, height: 254) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       sokkuri: file(relativePath: { eq: "works/sokkuri.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {

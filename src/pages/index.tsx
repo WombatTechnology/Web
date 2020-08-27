@@ -13,6 +13,7 @@ import Img from "gatsby-image"
 import '../globalStyle.css'
 import '../reset.css'
 import styled from "@emotion/styled"
+import Company from "../components/index/company"
 
 const IndexPage = () => {
   const aboutRef = useRef(null)
@@ -23,6 +24,7 @@ const IndexPage = () => {
       <About />
       <Service />
       <Works />
+      <Company />
       <Contact />
     </Layout>
   )

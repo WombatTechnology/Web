@@ -40,6 +40,8 @@ const Background = styled.header`
   margin: auto;
   display: flex;
   justify-content: center;
+  box-shadow: 0 4px 4px #ababab38;
+  margin-bottom: 4px;
 `
 const Container = styled.nav`
   min-width: ${ContainerWidth};

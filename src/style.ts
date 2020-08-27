@@ -17,6 +17,14 @@ export const SubTitle = styled.p`
   font-weight: 600;
   font-size: 20px;
 `
+export const SubTitle_18 = styled.p`
+  font-weight: 600;
+  font-size: 18px;
+`
+export const SubTitle_18_span = styled.span`
+  font-weight: 600;
+  font-size: 18px;
+`
 export const Spacer = styled.div`
   flex-grow: 1;
 `

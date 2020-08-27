@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, Description, SubTitle, SmallDescription, Spacer } from "../../style"
 import Section from './section'
-import './contact.css'
 import { ContactForm } from '@kazuwombat/fire-form'
 import config from '../../firebaseConfig'
 
