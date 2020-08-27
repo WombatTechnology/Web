@@ -1,22 +1,11 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, Description } from "../../style"
 import Section from './section'
+import { images } from '../common/images'
 
 const About = () => {
-  const { findImage } = useStaticQuery(graphql`
-  query {
-    findImage: file(relativePath: { eq: "find.png" }) {
-      childImageSharp {
-        fixed(width: 400) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`)
   return (
     <Section id="about" title="About" titleSupplement="わたしたちについて">
       <InnerContainer>
@@ -32,7 +21,7 @@ const About = () => {
           お手伝いします。
         </Description>
         <ImageContainer>
-          <Img fixed={findImage.childImageSharp.fixed} />
+          <Img fixed={images().findImage.childImageSharp.fixed} />
         </ImageContainer>
       </InnerContainer>
     </Section>

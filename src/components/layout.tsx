@@ -7,7 +7,6 @@
 
 import React, { ReactNode } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { ContainerWidth } from "../style"
 import Header from "./common/header"

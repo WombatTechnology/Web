@@ -7,7 +7,7 @@ export enum Colors {
 }
 
 export const Description = styled.p`
-  font-weight: 600;
+  font-weight: 600;4
   font-size: 20px;
 `
 export const SmallDescription = styled.p`

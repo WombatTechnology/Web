@@ -1,26 +1,15 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors } from "../../style"
 import "./scrollButton.css"
 import ScrollIntoView from 'react-scroll-into-view'
+import { images } from '../common/images'
 
 const EyeCatch = () => {
-  const { mainLogo } = useStaticQuery(graphql`
-  query {
-    mainLogo: file(relativePath: { eq: "main-logo.png" }) {
-      childImageSharp {
-        fixed(width: 279, height: 281) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`)
   return (
     <Background>
-      <Img fixed={mainLogo.childImageSharp.fixed} />
+      <Img fixed={images().mainLogo.childImageSharp.fixed} />
       <Message>日々の悩みをテクノロジーの力で解決する</Message>
       <ScrollIntoView selector="#about">
         <ScrollButtonContainer>

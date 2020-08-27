@@ -1,36 +1,12 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, Description, SubTitle, SmallDescription, Spacer } from "../../style"
 import Section from './section'
+import { images } from '../common/images'
+
 
 const Service = () => {
-  const { appImage, webImage, uiUxImage } = useStaticQuery(graphql`
-  query {
-    appImage: file(relativePath: { eq: "service-app.png" }) {
-      childImageSharp {
-        fixed(width: 109) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    webImage: file(relativePath: { eq: "service-web.png" }) {
-      childImageSharp {
-        fixed(width: 203) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    uiUxImage: file(relativePath: { eq: "service-uiux.png" }) {
-      childImageSharp {
-        fixed(width: 192) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`)
   return (
     <Section id="service" title="Service" titleSupplement="サービス">
       <Description>
@@ -40,7 +16,7 @@ const Service = () => {
         </Description>
       <Services>
         <ServiceItem>
-          <Img fixed={appImage.childImageSharp.fixed} />
+          <Img fixed={images().appImage.childImageSharp.fixed} />
           <Spacer />
           <ServiceItemTitle>
             <SubTitle>アプリ開発</SubTitle>
@@ -50,7 +26,7 @@ const Service = () => {
           </ServiceItemDescription>
         </ServiceItem>
         <ServiceItem>
-          <Img fixed={webImage.childImageSharp.fixed} />
+          <Img fixed={images().webImage.childImageSharp.fixed} />
           <Spacer />
           <ServiceItemTitle>
             <SubTitle>WEBシステム開発</SubTitle>
@@ -60,7 +36,7 @@ const Service = () => {
           </ServiceItemDescription>
         </ServiceItem>
         <ServiceItem>
-          <Img fixed={uiUxImage.childImageSharp.fixed} />
+          <Img fixed={images().uiUxImage.childImageSharp.fixed} />
           <Spacer />
           <ServiceItemTitle>
             <SubTitle>UI/UXデザイン</SubTitle>

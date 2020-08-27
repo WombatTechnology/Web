@@ -1,27 +1,16 @@
 import { Link } from "gatsby"
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, ContainerWidth } from "../../style"
 import ScrollIntoView from 'react-scroll-into-view'
+import { images } from '../common/images'
 
 const Header = () => {
-  const { headerLogo } = useStaticQuery(graphql`
-  query {
-    headerLogo: file(relativePath: { eq: "header-logo.png" }) {
-      childImageSharp {
-        fixed(width: 200, height: 60) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`)
   return (
     <Background>
       <Container>
-        <Img fixed={headerLogo.childImageSharp.fixed} />
+        <Img fixed={images().headerLogo.childImageSharp.fixed} />
         <MenuLinks>
           <ScrollIntoView selector="#about">
             <MenuLink>ABOUT</MenuLink>

@@ -1,6 +1,5 @@
 import React, { useRef } from "react"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import EyeCatch from '../components/index/eyeCatch'
