@@ -57,6 +57,7 @@ const Services = styled.section`
   @media (max-width: ${mediaMaxWidth}) {
     flex-direction: column;
     align-items: center;
+    margin: 0;
   }
 `
 const Spacer = styled.div`

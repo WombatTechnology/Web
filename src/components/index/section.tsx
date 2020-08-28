@@ -1,4 +1,4 @@
-import React from "react"
+import React, { CSSProperties } from "react"
 import styled from "@emotion/styled"
 import { ContainerWidth, Colors, mediaMaxWidth, Heading } from "../../style"
 
@@ -7,10 +7,11 @@ interface Props {
   children: React.ReactNode,
   title: string,
   titleSupplement: string
+  style?: CSSProperties
 }
-const Section = ({ id, children, title, titleSupplement }: Props) => {
+const Section = ({ id, children, title, titleSupplement, style }: Props) => {
   return (
-    <Container id={id}>
+    <Container id={id} style={style}>
       <TitleDiv>
         <Heading>{title}</Heading>
         <Supplement>{titleSupplement}</Supplement>
@@ -26,7 +27,8 @@ const Container = styled.section`
   margin: 80px auto 0 auto;
   background-color: ${Colors.BaseGray};
   @media (max-width: ${mediaMaxWidth}) {
-    padding: 30px 24px;
+    padding: 30px 24px 60px 24px;
+    margin: 80px 16px;
   }
 `
 

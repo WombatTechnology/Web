@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const mediaMaxWidth = '576px'
+export const mediaMaxWidth = '980px'
 
 export enum Colors {
   White = '#ffffff',
@@ -47,6 +47,12 @@ export const Text_14px = styled.p`
 export const BrForSp = styled.br`
   display: none;
   @media (max-width: ${mediaMaxWidth}) {
+    display: block;
+  }
+`
+export const BrForPC = styled.br`
+  display: none;
+  @media (min-width: ${mediaMaxWidth}) {
     display: block;
   }
 `

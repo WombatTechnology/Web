@@ -16,10 +16,18 @@ const Header = () => {
   const node = useRef();
 
   useOnClickOutside(node, () => setOpen(false));
+
   return (
     <Background>
       <Container>
-        <Img fruid={images().headerLogo.childImageSharp.fruid} />
+        <Img fixed={
+          [
+            images().headerLogoPC.childImageSharp.fixed,
+            {
+              ...images().headerLogoSP.childImageSharp.fixed,
+              media: `(max-width: ${mediaMaxWidth})`,
+            }
+          ]} />
         <MenuLinks>
           <ScrollIntoView selector="#about">
             <MenuLink>About</MenuLink>
@@ -37,12 +45,13 @@ const Header = () => {
             <MenuLink>Contact</MenuLink>
           </ScrollIntoView>
         </MenuLinks>
-        <SPMenu>
+        {/* 現状Menuは不要 */}
+        {/* <SPMenu>
           <FocusLock disabled={!open}>
             <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
             <Menu open={open} setOpen={setOpen} id={menuId} />
           </FocusLock>
-        </SPMenu>
+        </SPMenu> */}
       </Container>
     </Background>
   )
@@ -58,15 +67,19 @@ const Background = styled.header`
   justify-content: center;
   box-shadow: 0 4px 4px #ababab38;
   margin-bottom: 4px;
+  @media (max-width: ${mediaMaxWidth}) {
+    height: 62px;
+    padding: 0 20px;
+  }
 `
 const Container = styled.nav`
-  max-width: ${ContainerWidth};
+  width: ${ContainerWidth};
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
 const MenuLinks = styled.div`
-  width: 608px;
+  width: 600px;
   height: 27px;
   display: flex;
   justify-content: space-between;

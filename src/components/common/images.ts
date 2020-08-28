@@ -1,11 +1,20 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
+
+
 export const images = () => {
   const images = useStaticQuery(graphql`
     query {
-      findImage: file(relativePath: { eq: "find.png" }) {
+      findImagePC: file(relativePath: { eq: "find.png" }) {
         childImageSharp {
           fixed(width: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      findImageSP: file(relativePath: { eq: "find.png" }) {
+        childImageSharp {
+          fixed(width: 254) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -17,16 +26,30 @@ export const images = () => {
           }
         }
       }
-      headerLogo: file(relativePath: { eq: "header-logo.png" }) {
+      headerLogoPC: file(relativePath: { eq: "header-logo.png" }) {
         childImageSharp {
           fixed(width: 200, height: 60) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      mainLogo: file(relativePath: { eq: "main-logo.png" }) {
+      headerLogoSP: file(relativePath: { eq: "header-logo.png" }) {
+        childImageSharp {
+          fixed(width: 108, height: 32) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mainLogoPC: file(relativePath: { eq: "main-logo.png" }) {
         childImageSharp {
           fixed(width: 279, height: 281) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mainLogoSP: file(relativePath: { eq: "main-logo.png" }) {
+        childImageSharp {
+          fixed(width: 197, height: 199) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -56,9 +79,6 @@ export const images = () => {
         childImageSharp {
           fixed(width: 240, height: 254) {
             ...GatsbyImageSharpFixed
-          }
-          fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
           }
         }
       }

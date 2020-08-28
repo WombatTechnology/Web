@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, ContainerWidth } from "../../style"
+import { Colors, ContainerWidth, mediaMaxWidth } from "../../style"
 import ScrollIntoView from 'react-scroll-into-view'
 import { images } from '../common/images'
 
@@ -10,7 +10,13 @@ const Footer = () => {
   return (
     <Background>
       <Container>
-        <Img fixed={images().footerLogo.childImageSharp.fixed} />
+        <Img fixed={[
+          images().headerLogoPC.childImageSharp.fixed,
+          {
+            ...images().headerLogoSP.childImageSharp.fixed,
+            media: `(max-width: ${mediaMaxWidth})`,
+          }
+        ]} />
       </Container>
     </Background>
   )
@@ -19,15 +25,19 @@ const Footer = () => {
 const Background = styled.footer`
   height: 90px;
   background-color: ${Colors.White};
-  width: 100%;
+  width: 980px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
+  @media (max-width: ${mediaMaxWidth}) {
+    margin-top: 0;
+    padding: 0 16px;
+  }
 `
 
 const Container = styled.nav`
-  min-width: ${ContainerWidth};
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

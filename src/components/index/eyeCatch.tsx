@@ -9,7 +9,13 @@ import { images } from '../common/images'
 const EyeCatch = () => {
   return (
     <Background>
-      <Img fixed={images().mainLogo.childImageSharp.fixed} />
+      <Img fixed={[
+        images().mainLogoPC.childImageSharp.fixed,
+        {
+          ...images().mainLogoSP.childImageSharp.fixed,
+          media: `(max-width: ${mediaMaxWidth})`,
+        }
+      ]} />
       <Message>日々の悩みを<BrForSp />テクノロジーの力で解決する</Message>
       <ScrollIntoView selector="#about">
         <ScrollButtonContainer>
@@ -21,7 +27,10 @@ const EyeCatch = () => {
 }
 
 const Background = styled.div`
-  height: 100vh;
+  height: calc(100vh - 90px);
+  @media (max-width: ${mediaMaxWidth}) {
+    height: calc(100vh - 62px);
+  }
   background-color: ${Colors.BaseGray};
   width: 100%;
   margin: auto;

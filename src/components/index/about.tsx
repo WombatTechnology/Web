@@ -1,27 +1,34 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, Description, mediaMaxWidth } from "../../style"
+import { Colors, mediaMaxWidth, BrForPC } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
 
 const About = () => {
+
   return (
     <Section id="about" title="About" titleSupplement="わたしたちについて">
       <InnerContainer>
         <Description>
           ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、
-          <br />
-          アプリ開発を得意とするソフトウェア開発会社です。
+          <BrForPC />
+          アプリケーション開発を得意とするソフトウェア開発会社です。
           <br />
           ただ作るのではなくユーザーの本質的な課題を見極め、
-          <br />
+          <BrForPC />
           それらの課題を適切なテクノロジーで解決することを
-          <br />
+          <BrForPC />
           お手伝いします。
         </Description>
         <ImageContainer>
-          <Img fixed={images().findImage.childImageSharp.fixed} />
+          <Img fixed={[
+            images().findImagePC.childImageSharp.fixed,
+            {
+              ...images().findImageSP.childImageSharp.fixed,
+              media: `(max-width: ${mediaMaxWidth})`,
+            }
+          ]} />
         </ImageContainer>
       </InnerContainer>
     </Section>
@@ -32,6 +39,8 @@ const InnerContainer = styled.div`
   @media (max-width: ${mediaMaxWidth}) {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 52px;
   }
   @media (min-width: ${mediaMaxWidth}) {
     position: relative;
@@ -44,6 +53,14 @@ const ImageContainer = styled.div`
     position: absolute;
     right: -64px;
     bottom: -82px;
+  }
+`
+
+const Description = styled.p`
+  font-weight: 600;4
+  font-size: 20px;
+  @media (max-width: ${mediaMaxWidth}) {
+    margin-top: 52px;
   }
 `
 
