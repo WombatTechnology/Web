@@ -16,7 +16,7 @@ const EyeCatch = () => {
           media: `(max-width: ${mediaMaxWidth})`,
         }
       ]} />
-      <Message>日々の悩みを<BrForSp />テクノロジーの力で解決する</Message>
+      {/* <Message>日々の悩みを<BrForSp />テクノロジーの力で解決する</Message> */}
       <ScrollIntoView selector="#about">
         <ScrollButtonContainer>
           <div className="scrollButton"><span></span>Scroll</div>
