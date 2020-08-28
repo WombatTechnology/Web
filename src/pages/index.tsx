@@ -27,13 +27,4 @@ const IndexPage = () => {
     </Layout >
   )
 }
-
-const ScrollButton = styled.div`
-position: fixed;
-bottom: 0;
-right: 0;
-`
-
-
-
 export default IndexPage

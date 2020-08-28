@@ -5,3 +5,11 @@
  */
 
 // You can delete this file if you're not using it
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
+exports.onCreateNode = ({ node, getNode }) => {
+  if (node.internal.type === `MarkdownRemark`) {
+    const fileNode = getNode(node.parent)
+    console.log(`\n`, fileNode.relativePath)
+  }
+}

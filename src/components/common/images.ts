@@ -96,6 +96,13 @@ export const images = () => {
           }
         }
       }
+      coverApole: file(relativePath: { eq: "works/cover_apole.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1070) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
       persona: file(relativePath: { eq: "works/persona.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {
@@ -110,9 +117,16 @@ export const images = () => {
           }
         }
       }
-      close: file(relativePath: { eq: "close.png" }) {
+      closePC: file(relativePath: { eq: "close.png" }) {
         childImageSharp {
           fixed(width: 48, height: 48) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      closeSP: file(relativePath: { eq: "close.png" }) {
+        childImageSharp {
+          fixed(width: 32, height: 32) {
             ...GatsbyImageSharpFixed
           }
         }

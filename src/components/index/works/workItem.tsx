@@ -11,12 +11,14 @@ interface WorkItemProps {
 
 const WorkItem = ({ id, title, image }: WorkItemProps) => {
   return (
-    <WorkItemContainer>
-      <ImageContainer>
-        <Img fixed={image.childImageSharp.fixed} />
-      </ImageContainer>
-      <SubTitle>{title}</SubTitle>
-    </WorkItemContainer>
+    <a href="/works/apole">
+      <WorkItemContainer>
+        <ImageContainer>
+          <Img fixed={image.childImageSharp.fixed} />
+        </ImageContainer>
+        <SubTitle>{title}</SubTitle>
+      </WorkItemContainer>
+    </a>
   )
 }
 

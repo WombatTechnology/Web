@@ -33,6 +33,7 @@ const Background = styled.footer`
   @media (max-width: ${mediaMaxWidth}) {
     margin-top: 0;
     padding: 0 16px;
+    width: 100%;
   }
 `
 

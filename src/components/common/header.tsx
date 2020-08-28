@@ -20,14 +20,16 @@ const Header = () => {
   return (
     <Background>
       <Container>
-        <Img fixed={
-          [
-            images().headerLogoPC.childImageSharp.fixed,
-            {
-              ...images().headerLogoSP.childImageSharp.fixed,
-              media: `(max-width: ${mediaMaxWidth})`,
-            }
-          ]} />
+        <a href="/">
+          <Img fixed={
+            [
+              images().headerLogoPC.childImageSharp.fixed,
+              {
+                ...images().headerLogoSP.childImageSharp.fixed,
+                media: `(max-width: ${mediaMaxWidth})`,
+              }
+            ]} />
+        </a>
         <MenuLinks>
           <ScrollIntoView selector="#about">
             <MenuLink>About</MenuLink>

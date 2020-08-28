@@ -27,7 +27,7 @@ const Container = styled.section`
   margin: 80px auto 0 auto;
   background-color: ${Colors.BaseGray};
   @media (max-width: ${mediaMaxWidth}) {
-    padding: 30px 24px 60px 24px;
+    padding: 30px 24px 60px;
     margin: 80px 16px;
   }
 `
