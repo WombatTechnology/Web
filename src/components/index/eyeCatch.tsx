@@ -5,10 +5,13 @@ import { Colors, mediaMaxWidth, BrForSp } from "../../style"
 import "./scrollButton.css"
 import ScrollIntoView from 'react-scroll-into-view'
 import { images } from '../common/images'
+import useWindowDimensions from "../../hooks/useWindowDimentions"
 
 const EyeCatch = () => {
+  const { height } = useWindowDimensions();
+
   return (
-    <Background>
+    <Background height={height}>
       <Img fixed={[
         images().mainLogoPC.childImageSharp.fixed,
         {
@@ -29,7 +32,7 @@ const EyeCatch = () => {
 const Background = styled.div`
   height: calc(100vh - 90px);
   @media (max-width: ${mediaMaxWidth}) {
-    height: calc(100vh - 62px);
+    height: ${({ height }) => `calc(${height}px - 62px)`}
   }
   background-color: ${Colors.BaseGray};
   width: 100%;
