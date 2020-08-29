@@ -6,10 +6,28 @@
 
 // You can delete this file if you're not using it
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const locales = require('./src/data/locales')
 
-exports.onCreateNode = ({ node, getNode }) => {
-  if (node.internal.type === `MarkdownRemark`) {
-    const fileNode = getNode(node.parent)
-    console.log(`\n`, fileNode.relativePath)
-  }
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+
+  return new Promise(resolve => {
+    deletePage(page)
+
+    Object.keys(locales).map(lang => {
+      const localizedPath = locales[lang].default
+        ? page.path
+        : locales[lang].path + page.path
+
+      return createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          locale: lang
+        }
+      })
+    })
+
+    resolve()
+  })
 }

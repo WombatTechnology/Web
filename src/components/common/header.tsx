@@ -8,7 +8,7 @@ import { images } from '../common/images'
 import FocusLock from 'react-focus-lock';
 import Burger from "./burger"
 import Menu from "./menu"
-import { useOnClickOutside } from "../../hooks"
+import { useOnClickOutside } from "../../models/hooks/useOnClickOutside"
 
 const Header = () => {
   const [open, setOpen] = useState(false);
