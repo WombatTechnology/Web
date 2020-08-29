@@ -7,17 +7,25 @@ import styled from "@emotion/styled"
 import { images } from "../common/images"
 import Img from "gatsby-image"
 
-const Company = () => {
-  let info = {
-    "社名": "株式会社ウォンバットテクノロジー",
-    "資本金": "1,000,000円",
-    "設立日": "2020年９月1日",
-    "代表取締役": "松本和也",
-    "所在地": "〒110-0015 東京都台東区東上野3-12-1井合ビル４F"
+interface Props {
+  company: {
+    subtitle: string
+    description: string,
+    info: InfoProps
   }
+}
 
+interface InfoProps {
+  [key: string]: {
+    label: string
+    value: string
+  }
+}
+
+const Company = ({ company: { subtitle, description, info } }: Props) => {
+  console.log("inof", info)
   return (
-    <Section id="company" title="Company" titleSupplement="会社情報">
+    <Section id="company" title="Company" titleSupplement={subtitle}>
       <Content>
         <Img fixed={images().company.childImageSharp.fixed} />
         <PCInfoTable info={info} />
@@ -27,41 +35,45 @@ const Company = () => {
   )
 }
 
-
-interface Props {
-  info: { [key: string]: string }
+interface InfoTableProps {
+  info: InfoProps
 }
 
-const PCInfoTable = ({ info }: Props) => (
+const PCInfoTable = ({ info }: InfoTableProps) => (
   <InfoTable>
-    {
-      Object.keys(info).map((key) => (
-        <InfoTableRow>
-          <td>
-            <SubTitle_18_span>{key}</SubTitle_18_span>
-          </td>
-          <td>
-            <SubTitle_18_span>{info[key]}</SubTitle_18_span>
-          </td>
-        </InfoTableRow>
-      ))
-    }
+    <tbody>
+      {
+        Object.entries(info).map(([key, dict]) => (
+          <InfoTableRow key={key}>
+            <td>
+              <SubTitle_18_span>{dict.label}</SubTitle_18_span>
+            </td>
+            <td>
+              <SubTitle_18_span>{dict.value}</SubTitle_18_span>
+            </td>
+          </InfoTableRow>
+        ))
+      }
+    </tbody>
   </InfoTable>
 )
 
-const SPInfoTable = ({ info }: Props) => (
-  <InfoTable_SP>
-    {
-      Object.keys(info).map((key) => (
-        <InfoTableRow_SP>
-          <Text_14px_gray>{key}</Text_14px_gray>
-          <Text_14px>{info[key]}</Text_14px>
-          <Divider />
-        </InfoTableRow_SP>
-      ))
-    }
-  </InfoTable_SP>
-)
+const SPInfoTable = ({ info }: InfoTableProps) => {
+  // debugger
+  return (
+    <InfoTable_SP>
+      {
+        Object.entries(info).map(([key, dict]) => (
+          <InfoTableRow_SP key={key}>
+            <Text_14px_gray>{dict.label}</Text_14px_gray>
+            <Text_14px>{dict.value}</Text_14px>
+            <Divider />
+          </InfoTableRow_SP>
+        ))
+      }
+    </InfoTable_SP>
+  )
+}
 
 const Content = styled.div`
   margin-top: 20px;

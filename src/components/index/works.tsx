@@ -6,13 +6,18 @@ import Section from './section'
 import { images } from '../common/images'
 import WorkItem from "./works/workItem"
 
-const Works = () => {
+interface Props {
+  works: {
+    subtitle: string
+    description: string
+  }
+}
+const Works = ({ works: { subtitle, description } }: Props) => {
+  console.log("desc", description)
   return (
-    <Section id="works" title="Works" titleSupplement="実績">
+    <Section id="works" title="Works" titleSupplement={subtitle}>
       <Description>
-        言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。
-          <br />
-          デザインも含めたアプリ、Webサービス開発を請け負います。
+        {description}
       </Description>
       <WorkItems>
         <WorkItem id={"sokkuri"} title={"そっくり度診断"} image={images().sokkuri} />

@@ -6,24 +6,32 @@ import Section from './section'
 import { ContactForm } from '@kazuwombat/fire-form'
 import config from '../../firebaseConfig'
 import ThankYouModal from "./thankyouModal"
-import FocusLock from "react-focus-lock"
 
-const Contact = () => {
+interface Props {
+  contact: {
+    subtitle: string
+    description: string
+    form: {
+      [key: string]: string
+    }
+  }
+}
+const Contact = ({ contact: { subtitle, description, form } }: Props) => {
   const [showThankYou, setThankYou] = useState(false);
   return (
-    <Section style={{ marginBottom: "0" }} id="contact" title="Contact" titleSupplement="お問い合わせ">
+    <Section style={{ marginBottom: "0" }} id="contact" title="Contact" titleSupplement={subtitle}>
       <Description>
-        開発のご相談など以下よりお気軽にお問い合わせください。
+        {description}
       </Description>
       <ContactForm
         config={config}
         setting={{
           containerStyle: { padding: "0" },
-          namePlaceHolder: "お名前",
-          companyNamePlaceHolder: "会社名",
-          emailPlaceHolder: "メールアドレス",
-          contentPlaceHolder: "お問い合わせ内容",
-          submitButtonLabel: "送信",
+          namePlaceHolder: form.personName,
+          companyNamePlaceHolder: form.companyName,
+          emailPlaceHolder: form.email,
+          contentPlaceHolder: form.inquiryContent,
+          submitButtonLabel: form.submit,
         }}
         successCallback={() => { setThankYou(true) }}
         errorCallback={(error) => { alert(error) /* TODO Handle Error */ }}

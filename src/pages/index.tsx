@@ -14,21 +14,18 @@ import '../reset.css'
 import styled from "@emotion/styled"
 import Company from "../components/index/company"
 
-const IndexPage = ({ data }) => {
-  console.log("data", data)
-  const hello = data.file.childIndexJson.hello
-  // const localeData = data.file.childIndexJson.hello
-
+const IndexPage = ({ data }: any) => {
+  const { about, service, works, company, contact } = data.file.childIndexJson.pages.index
+  console.log("about", data.file.childIndexJson.pages.index)
   return (
     <Layout>
-      <p>{hello}</p>
       <SEO />
       <EyeCatch />
-      <About />
-      <Service />
-      <Works />
-      <Company />
-      <Contact />
+      <About about={about} />
+      <Service service={service} />
+      <Works works={works} />
+      <Company company={company} />
+      <Contact contact={contact} />
     </Layout >
   )
 }
@@ -38,7 +35,72 @@ export const query = graphql`
   query Home($locale: String) {
     file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
       childIndexJson {
-        hello
+        pages {
+          index {
+            about {
+              subtitle
+              description
+            }
+            service {
+              subtitle
+              description
+              items {
+                app {
+                  title
+                  description
+                }
+                web {
+                  title
+                  description
+                }
+                uiUx {
+                  title
+                  description
+                }
+              }
+            }
+            works {
+              subtitle
+              description
+            }
+            company {
+              subtitle
+              info {
+                companyName {
+                  label
+                  value
+                }
+                capital {
+                  label
+                  value
+                }
+                establishmentDate {
+                  label
+                  value
+                }
+                ceo {
+                  label
+                  value
+                }
+                place {
+                  label
+                  value
+                }
+              }
+            }
+            contact {
+              subtitle
+              description
+              form {
+                personName
+                companyName
+                email
+                inquiryContent
+                submit
+              }
+            }
+          }
+        }
       }
     }
   }

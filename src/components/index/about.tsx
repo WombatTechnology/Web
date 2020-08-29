@@ -4,22 +4,20 @@ import styled from "@emotion/styled"
 import { Colors, mediaMaxWidth, BrForPC } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
+import { graphql } from "gatsby"
 
-const About = () => {
-
+interface Props {
+  about: {
+    subtitle: string
+    description: string
+  }
+}
+const About = ({ about: { subtitle, description } }: Props) => {
   return (
-    <Section id="about" title="About" titleSupplement="わたしたちについて">
+    <Section id="about" title="About" titleSupplement={subtitle}>
       <InnerContainer>
         <Description>
-          ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、
-          <BrForPC />
-          アプリケーション開発を得意とするソフトウェア開発会社です。
-          <br />
-          ただ作るのではなくユーザーの本質的な課題を見極め、
-          <BrForPC />
-          それらの課題を適切なテクノロジーで解決することを
-          <BrForPC />
-          お手伝いします。
+          {description}
         </Description>
         <ImageContainer>
           <Img fixed={[

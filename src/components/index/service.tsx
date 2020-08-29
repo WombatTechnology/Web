@@ -5,44 +5,65 @@ import { Colors, Description, SubTitle, SmallDescription, mediaMaxWidth } from "
 import Section from './section'
 import { images } from '../common/images'
 
+interface Props {
+  service: {
+    subtitle: string
+    description: string,
+    items: {
+      app: {
+        title: string,
+        description: string
+      },
+      web: {
+        title: string,
+        description: string
+      },
+      uiUx: {
+        title: string,
+        description: string
+      }
+    }
+  }
+}
 
-const Service = () => {
+const Service = ({ service: { subtitle, description, items } }: Props) => {
+
+  const { app, web, uiUx } = items
+
   return (
-    <Section id="service" title="Service" titleSupplement="サービス">
+    <Section id="service" title="Service" titleSupplement={subtitle}>
       <Description>
-        言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。
-          <br />
-          デザインも含めたアプリ、Webサービス開発を請け負います。
-        </Description>
+        {description}
+      </Description>
       <Services>
         <ServiceItem>
           <Img fixed={images().appImage.childImageSharp.fixed} />
           <Spacer />
           <ServiceItemTitle>
-            <SubTitle>アプリ開発</SubTitle>
+            <SubTitle>{app.title}</SubTitle>
           </ServiceItemTitle>
           <ServiceItemDescription>
-            <SmallDescription>スマートフォンアプリの企画・開発をサポートします。</SmallDescription>
+            <SmallDescription>{app.description}</SmallDescription>
           </ServiceItemDescription>
         </ServiceItem>
         <ServiceItem>
           <Img fixed={images().webImage.childImageSharp.fixed} />
           <Spacer />
           <ServiceItemTitle>
-            <SubTitle>WEBシステム開発</SubTitle>
+            <SubTitle>{web.title}</SubTitle>
           </ServiceItemTitle>
           <ServiceItemDescription>
-            <SmallDescription>スマートフォンアプリの企画・開発をサポートします。</SmallDescription>
+            <SmallDescription>{web.description}</SmallDescription>
           </ServiceItemDescription>
         </ServiceItem>
         <ServiceItem>
           <Img fixed={images().uiUxImage.childImageSharp.fixed} />
           <Spacer />
           <ServiceItemTitle>
-            <SubTitle>UI/UXデザイン</SubTitle>
+            <SubTitle>{uiUx.title}</SubTitle>
           </ServiceItemTitle>
           <ServiceItemDescription>
-            <SmallDescription>使いやすいユーザー・インターフェイスを設計します。</SmallDescription>
+            <SmallDescription>{uiUx.description}</SmallDescription>
           </ServiceItemDescription>
         </ServiceItem>
       </Services>
