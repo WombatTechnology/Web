@@ -3,6 +3,7 @@ import Img, { FixedObject } from "gatsby-image"
 import styled from "@emotion/styled"
 import { SmallDescription, Spacer, mediaMaxWidth } from "../../../style"
 import { SubTitle } from "../../common/text"
+import { Link } from "gatsby"
 
 interface WorkItemProps {
   id: string
@@ -12,14 +13,14 @@ interface WorkItemProps {
 
 const WorkItem = ({ id, image }: WorkItemProps) => {
   return (
-    <a href="/works/apole">
+    <Link to={"/works/" + id}>
       <WorkItemContainer>
         <ImageContainer>
           <Img fixed={image.childImageSharp.fixed} />
         </ImageContainer>
         <SubTitle id={`works.${id}.title`} style={{ marginTop: "24px" }} />
       </WorkItemContainer>
-    </a>
+    </Link>
   )
 }
 

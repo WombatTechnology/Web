@@ -4,7 +4,7 @@ import { Text_14px } from "../../style"
 
 interface Props {
   label: string,
-  onClick: () => void,
+  onClick?: () => void,
   upperLabel?: string,
   style: CSSProperties
 }

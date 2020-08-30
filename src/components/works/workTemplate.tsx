@@ -20,6 +20,7 @@ export enum ButtonType {
 }
 
 const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
+
   return (
     <Layout>
       <Container>
@@ -30,10 +31,9 @@ const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
         <DetailContainer>
           <Description id="works.detail" />
           <Description id={`works.${id}.description`} style={{ marginTop: "24px" }} />
-          <DownloadButton>
+          <DownloadButton href={intl.formatMessage({ id: `works.${id}.href` })} >
             <PrimaryButton
               label={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.label` })}
-              onClick={() => alert("click")}
               upperLabel={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.upperLabel` })}
               style={{ marginTop: "58px" }}
             />
@@ -57,7 +57,7 @@ const DetailContainer = styled.section`
     padding: 40px 24px;
   }
 `
-const DownloadButton = styled.section`
+const DownloadButton = styled.a`
   @media (max-width: ${mediaMaxWidth}) {
     margin: auto;
     display: flex;
