@@ -4,22 +4,16 @@ import styled from "@emotion/styled"
 import { Colors, mediaMaxWidth, BrForPC } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
+import { FormattedMessage } from "react-intl"
+import intl from "../../i18n/intl"
 
 const About = () => {
-
+  console.log("intl", intl)
   return (
-    <Section id="about" title="About" titleSupplement="わたしたちについて">
+    <Section id="about" title="About" titleSupplement={intl.formatMessage({ id: 'pages.index.about.subtitle' })}>
       <InnerContainer>
         <Description>
-          ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、
-          <BrForPC />
-          アプリケーション開発を得意とするソフトウェア開発会社です。
-          <br />
-          ただ作るのではなくユーザーの本質的な課題を見極め、
-          <BrForPC />
-          それらの課題を適切なテクノロジーで解決することを
-          <BrForPC />
-          お手伝いします。
+          <FormattedMessage id="pages.index.about.description" />
         </Description>
         <ImageContainer>
           <Img fixed={[

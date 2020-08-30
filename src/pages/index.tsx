@@ -13,8 +13,8 @@ import '../globalStyle.css'
 import '../reset.css'
 import styled from "@emotion/styled"
 import Company from "../components/index/company"
-
 const IndexPage = () => {
+
   return (
     <Layout>
       <SEO />

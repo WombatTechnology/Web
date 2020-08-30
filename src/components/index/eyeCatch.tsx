@@ -5,7 +5,7 @@ import { Colors, mediaMaxWidth, BrForSp } from "../../style"
 import "./scrollButton.css"
 import ScrollIntoView from 'react-scroll-into-view'
 import { images } from '../common/images'
-import useWindowDimensions from "../../hooks/useWindowDimentions"
+import useWindowDimensions from "../../models/hooks/useWindowDimentions"
 
 const EyeCatch = () => {
   const { height } = useWindowDimensions();

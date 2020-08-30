@@ -6,23 +6,23 @@
  */
 
 import React, { ReactNode } from "react"
-import PropTypes from "prop-types"
-import styled from "@emotion/styled"
-import { ContainerWidth } from "../style"
 import Header from "./common/header"
 import Footer from "./common/footer"
 import "./layout.css"
+import { messages, lang } from '../i18n'
+import { IntlProvider } from 'react-intl'
 
 interface Props {
   children: ReactNode
 }
 const Layout = ({ children }: Props) => {
+  const lang = navigator.language
   return (
-    <>
+    <IntlProvider messages={messages[lang]} locale={lang} defaultLocale="en">
       <Header />
       <main>{children}</main>
       <Footer />
-    </>
+    </IntlProvider>
   )
 }
 
