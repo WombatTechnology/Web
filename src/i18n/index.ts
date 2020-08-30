@@ -1,3 +1,4 @@
-export { default as messages } from './messages'
-export { default as intl } from './intl'
-export const lang = navigator.language
+import en from './en'
+import ja from './ja'
+const messages = { en, ja }
+export default messages

@@ -1,7 +1,7 @@
-import React, { CSSProperties } from "react"
+import React, { CSSProperties, useContext } from "react"
 import styled from "@emotion/styled"
 import { ContainerWidth, Colors, mediaMaxWidth, Heading } from "../../style"
-import { intl } from "../../i18n"
+import { IntlContext } from "react-intl"
 
 interface Props {
   id: string,
@@ -10,6 +10,7 @@ interface Props {
   style?: CSSProperties
 }
 const Section = ({ id, children, title, style }: Props) => {
+  const intl = useContext(IntlContext)
   return (
     <Container id={id} style={style}>
       <TitleDiv>

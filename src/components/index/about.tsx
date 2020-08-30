@@ -7,10 +7,8 @@ import { images } from '../common/images'
 import { Description } from '../common/text'
 
 import { FormattedMessage } from "react-intl"
-import intl from "../../i18n/intl"
 
 const About = () => {
-  console.log("intl", intl)
   return (
     <Section id="about" title="About" >
       <InnerContainer>

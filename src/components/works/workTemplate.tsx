@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from "@emotion/styled"
 import { mediaMaxWidth } from '../../style';
 import { images } from '../common/images';
@@ -6,7 +6,7 @@ import Img, { FluidObject } from "gatsby-image"
 import Layout from "../../components/layout"
 import PrimaryButton from '../common/primaryButton';
 import { Description, Heading } from '../common/text';
-import { intl } from '../../i18n';
+import { IntlContext } from 'react-intl';
 
 interface Props {
   id: string,
@@ -20,6 +20,7 @@ export enum ButtonType {
 }
 
 const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
+  const intl = useContext(IntlContext)
 
   return (
     <Layout>

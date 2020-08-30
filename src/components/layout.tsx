@@ -9,19 +9,43 @@ import React, { ReactNode } from "react"
 import Header from "./common/header"
 import Footer from "./common/footer"
 import "./layout.css"
-import { messages, lang } from '../i18n'
-import { IntlProvider } from 'react-intl'
+import messages from '../i18n'
+import { IntlProvider, createIntl, createIntlCache } from 'react-intl'
 
 interface Props {
-  children: ReactNode
+  children: ReactNode,
+  locale: string
 }
-const Layout = ({ children }: Props) => {
+
+// 子コンポーネントで
+// const intl = useCOntext(IntlContext)
+// intl.formatMessage({ id: `id` })
+// の形で利用する。
+export const IntlContext = React.createContext(null)
+
+const Layout = ({ children, locale }: Props) => {
+  // localeからintl生成
+  const cache = createIntlCache()
+  const lang = navigator.language
+  const intl = createIntl(
+    {
+      // 言語
+      locale: lang,
+      // デフォルトの言語
+      defaultLocale: 'en',
+      // Cache
+      messages: messages[locale],
+    },
+    cache
+  )
   return (
-    <IntlProvider messages={messages[lang]} locale={lang} defaultLocale="en">
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </IntlProvider>
+    <IntlContext.Provider value={intl}>
+      <IntlProvider messages={messages[locale]} locale={locale} defaultLocale="ja">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </IntlProvider>
+    </IntlContext.Provider>
   )
 }
 

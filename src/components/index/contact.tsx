@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, SubTitle, SmallDescription, Spacer } from "../../style"
@@ -8,9 +8,10 @@ import config from '../../firebaseConfig'
 import ThankYouModal from "./thankyouModal"
 import FocusLock from "react-focus-lock"
 import { Description } from "../common/text"
-import { intl } from "../../i18n"
+import { IntlContext } from "react-intl"
 
 const Contact = () => {
+  const intl = useContext(IntlContext)
   const [showThankYou, setThankYou] = useState(false);
 
   const formKeyFormat = (key: string) => {

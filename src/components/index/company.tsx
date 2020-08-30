@@ -1,12 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import { SubTitle_18_span, mediaMaxWidth, Text_14px_gray, Text_14px, Divider } from "../../style"
 import Section from './section'
 import styled from "@emotion/styled"
 import { images } from "../common/images"
 import Img from "gatsby-image"
-import { intl } from "../../i18n"
+import { IntlContext } from "../layout"
 
 const Company = () => {
+  const intl = useContext(IntlContext)
+
   const format = (key: string) => {
     return intl.formatMessage({ id: `pages.index.company.info.${key}` })
   }

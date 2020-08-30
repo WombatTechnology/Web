@@ -5,7 +5,6 @@ import { Colors, mediaMaxWidth } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
 import { FormattedMessage } from "react-intl"
-import intl from "../../i18n/intl"
 import { Description, SubTitle, SmallDescription } from "../common/text"
 
 const Service = () => {
