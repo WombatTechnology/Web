@@ -4,17 +4,19 @@ import styled from "@emotion/styled"
 import { Colors, mediaMaxWidth, BrForPC } from "../../style"
 import Section from './section'
 import { images } from '../common/images'
+import { Description } from '../common/text'
+
 import { FormattedMessage } from "react-intl"
 import intl from "../../i18n/intl"
 
 const About = () => {
   console.log("intl", intl)
   return (
-    <Section id="about" title="About" titleSupplement={intl.formatMessage({ id: 'pages.index.about.subtitle' })}>
+    <Section id="about" title="About" >
       <InnerContainer>
-        <Description>
-          <FormattedMessage id="pages.index.about.description" />
-        </Description>
+        <DescriptoinLayout>
+          <Description id="pages.index.about.description" />
+        </DescriptoinLayout>
         <ImageContainer>
           <Img fixed={[
             images().findImagePC.childImageSharp.fixed,
@@ -50,9 +52,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const Description = styled.p`
-  font-weight: 600;4
-  font-size: 20px;
+const DescriptoinLayout = styled.div`
   @media (max-width: ${mediaMaxWidth}) {
     margin-top: 52px;
   }

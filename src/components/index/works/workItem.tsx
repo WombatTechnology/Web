@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, Description, SubTitle, SmallDescription, Spacer, mediaMaxWidth } from "../../../style"
+import { SubTitle, SmallDescription, Spacer, mediaMaxWidth } from "../../../style"
 
 interface WorkItemProps {
   id: string

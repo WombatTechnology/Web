@@ -10,13 +10,6 @@ export enum Colors {
   Border = "#DCDCDC"
 }
 
-export const Description = styled.p`
-  font-weight: 600;4
-  font-size: 20px;
-`
-export const SmallDescription = styled.p`
-  font-size: 14px;
-`
 export const SubTitle = styled.p`
   font-weight: 600;
   font-size: 20px;

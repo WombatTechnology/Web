@@ -12,12 +12,12 @@ export default flatten({
         "description": "From web application to native application development in any language or framework. We take care of app and web service development including design.",
         "items": {
           "app": {
-            "title": "app development",
+            "title": "App development",
             "description": "We plan and develop smartphone apps."
           },
           "web": {
-            "title": "web system development",
-            "description": "We develop web systems, including back-end development."
+            "title": "Web development",
+            "description": "Develop web systems, including back-end development."
           },
           "uiUx": {
             "title": "UI/UX Design",
@@ -61,8 +61,11 @@ export default flatten({
           "personName": "your name",
           "companyName": "company name",
           "email": "email address",
-          "InquiryContent": "Inquiry Content",
+          "inquiryContent": "Inquiry Content",
           "submit": "Send"
+        },
+        "modal": {
+          "thanksMessage": "Thank you for your inquiry and we will contact you via email within one business day."
         }
       }
     }

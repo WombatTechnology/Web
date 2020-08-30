@@ -1,35 +1,40 @@
 import React, { useState } from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, Description, SubTitle, SmallDescription, Spacer } from "../../style"
+import { Colors, SubTitle, SmallDescription, Spacer } from "../../style"
 import Section from './section'
 import { ContactForm } from '@kazuwombat/fire-form'
 import config from '../../firebaseConfig'
 import ThankYouModal from "./thankyouModal"
 import FocusLock from "react-focus-lock"
+import { Description } from "../common/text"
+import { intl } from "../../i18n"
 
 const Contact = () => {
   const [showThankYou, setThankYou] = useState(false);
+
+  const formKeyFormat = (key: string) => {
+    return intl.formatMessage({ id: `pages.index.contact.form.${key}` })
+  }
+
   return (
-    <Section style={{ marginBottom: "0" }} id="contact" title="Contact" titleSupplement="お問い合わせ">
-      <Description>
-        開発のご相談など以下よりお気軽にお問い合わせください。
-      </Description>
+    <Section style={{ marginBottom: "0" }} id="contact" title="Contact">
+      <Description id="pages.index.contact.description" />
       <ContactForm
         config={config}
         setting={{
           containerStyle: { padding: "0" },
-          namePlaceHolder: "お名前",
-          companyNamePlaceHolder: "会社名",
-          emailPlaceHolder: "メールアドレス",
-          contentPlaceHolder: "お問い合わせ内容",
-          submitButtonLabel: "送信",
+          namePlaceHolder: formKeyFormat("personName"),
+          companyNamePlaceHolder: formKeyFormat("companyName"),
+          emailPlaceHolder: formKeyFormat("email"),
+          contentPlaceHolder: formKeyFormat("inquiryContent"),
+          submitButtonLabel: formKeyFormat("submit"),
         }}
         successCallback={() => { setThankYou(true) }}
         errorCallback={(error) => { alert(error) /* TODO Handle Error */ }}
       />
       {
-        showThankYou && <ThankYouModal closeModal={() => setThankYou(false)} />
+        true && <ThankYouModal closeModal={() => setThankYou(false)} />
       }
     </Section>
   )

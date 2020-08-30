@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Img from "gatsby-image"
-import { Heading, Description, mediaMaxWidth } from "../../style"
+import { Heading, mediaMaxWidth } from "../../style"
 import { images } from "../../components/common/images"
+import { Description } from "../common/text"
 
 interface Props {
   closeModal: () => void
@@ -24,7 +25,7 @@ const ThankYouModal = ({ closeModal }: Props) => {
       <ModalContent>
         <Heading>Thank you!</Heading>
         <Img style={{ marginTop: "24px" }} fixed={images().thankyou.childImageSharp.fixed} />
-        <Description style={{ textAlign: "center", marginTop: "12px" }}>お問い合わせありがとうございます。<br />1営業日以内にメールでご連絡いたします。</Description>
+        <Description id="pages.index.contact.modal.thanksMessage" style={{ textAlign: "center", marginTop: "12px", padding: "0 12px" }} />
       </ModalContent>
     </Modal>
   )

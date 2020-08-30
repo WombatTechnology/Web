@@ -1,20 +1,20 @@
 import React, { CSSProperties } from "react"
 import styled from "@emotion/styled"
 import { ContainerWidth, Colors, mediaMaxWidth, Heading } from "../../style"
+import { intl } from "../../i18n"
 
 interface Props {
   id: string,
   children: React.ReactNode,
   title: string,
-  titleSupplement: string
   style?: CSSProperties
 }
-const Section = ({ id, children, title, titleSupplement, style }: Props) => {
+const Section = ({ id, children, title, style }: Props) => {
   return (
     <Container id={id} style={style}>
       <TitleDiv>
         <Heading>{title}</Heading>
-        <Supplement>{titleSupplement}</Supplement>
+        <Supplement>{intl.formatMessage({ id: `pages.index.${id}.subtitle` })}</Supplement>
       </TitleDiv>
       {children}
     </Container>

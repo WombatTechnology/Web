@@ -17,7 +17,7 @@ export default flatten({
           },
           "web": {
             "title": "WEBシステム開発",
-            "description": "バックエンド開発も含めたWEBシステムの開発を行います。"
+            "description": "WEBシステムの開発を行います。"
           },
           "uiUx": {
             "title": "UI/UXデザイン",
@@ -27,7 +27,7 @@ export default flatten({
       },
       "works": {
         "subtitle": "実績",
-        "description": "言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。デザインも含めたアプリ、Webサービス開発を請け負います。"
+        "description": "言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。デザインも含めたアプリ、Webサービス開発を請け負います。",
       },
       "company": {
         "subtitle": "会社情報",
@@ -63,8 +63,14 @@ export default flatten({
           "email": "メールアドレス",
           "inquiryContent": "お問い合わせ内容",
           "submit": "送信"
+        },
+        "modal": {
+          "thanksMessage": "お問い合わせありがとうございます。1営業日以内にメールにてご連絡いたします。"
         }
       }
+    },
+    "worksDetail": {
+      "detail": "詳細"
     }
   }
 })

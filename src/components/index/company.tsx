@@ -1,23 +1,25 @@
 import React from "react"
-import { Description, SubTitle_18_span, mediaMaxWidth, Text_14px_gray, Text_14px, Divider } from "../../style"
+import { SubTitle_18_span, mediaMaxWidth, Text_14px_gray, Text_14px, Divider } from "../../style"
 import Section from './section'
-import { ContactForm } from '@kazuwombat/fire-form'
-import config from '../../firebaseConfig'
 import styled from "@emotion/styled"
 import { images } from "../common/images"
 import Img from "gatsby-image"
+import { intl } from "../../i18n"
 
 const Company = () => {
+  const format = (key: string) => {
+    return intl.formatMessage({ id: `pages.index.company.info.${key}` })
+  }
   let info = {
-    "社名": "株式会社ウォンバットテクノロジー",
-    "資本金": "1,000,000円",
-    "設立日": "2020年９月1日",
-    "代表取締役": "松本和也",
-    "所在地": "〒110-0015 東京都台東区東上野3-12-1井合ビル４F"
+    [format("companyName.label")]: format("companyName.value"),
+    [format("capital.label")]: format("capital.value"),
+    [format("establishmentDate.label")]: format("establishmentDate.value"),
+    [format("ceo.label")]: format("ceo.value"),
+    [format("place.label")]: format("place.value"),
   }
 
   return (
-    <Section id="company" title="Company" titleSupplement="会社情報">
+    <Section id="company" title="Company">
       <Content>
         <Img fixed={images().company.childImageSharp.fixed} />
         <PCInfoTable info={info} />
@@ -66,9 +68,9 @@ const SPInfoTable = ({ info }: Props) => (
 const Content = styled.div`
   margin-top: 20px;
   display: flex;
+  align-items: center;
   @media (max-width: ${mediaMaxWidth}) {
     flex-direction: column;
-    align-items: center;
   }
 `
 

@@ -1,27 +1,38 @@
 import React, { useState, useRef } from "react"
-// Locale data
-import { IntlProvider, FormattedMessage, FormattedNumber, addLocaleData } from 'react-intl'
-
-const en = {
-  hello: "hello",
-}
-
-const jp = {
-  hello: "こんにちは"
-}
-
-const messages = { en, jp }
+import styled from "@emotion/styled"
 
 const Playground = () => {
-  console.log(messages)
   return (
-    <IntlProvider messages={messages["jp"]} locale="jp" defaultLocale="en">
-      <p>
-        <FormattedMessage
-          id="hello"
-        />
-      </p>
-    </IntlProvider>
+    <Container>
+      <A></A>
+      <Spacer />
+      <B></B>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  height: 600px;
+  width: 200px;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+`
+
+const A = styled.div`
+  height: 100px;
+  width: 100%;
+  background-color: red;
+`
+
+const B = styled.div`
+  height: 100px;
+  width: 100%;
+  background-color: blue;
+`
+
+const Spacer = styled.div`
+  flex-grow: 1;
+  background-color: yellow;
+`
 export default Playground
