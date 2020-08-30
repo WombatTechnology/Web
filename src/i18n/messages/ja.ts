@@ -69,8 +69,22 @@ export default flatten({
         }
       }
     },
-    "worksDetail": {
-      "detail": "詳細"
+  },
+  "works": {
+    "detail": "詳細",
+    "apole": {
+      "title": "apole",
+      "description": "apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文"
+    },
+    "sokkuri": {
+      "title": "そっくり度診断",
+      "description": "そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断"
+    },
+    "buttons": {
+      "downLoad": {
+        "upperLabel": "ダウンロードはこちら",
+        "label": "ダウンロード"
+      }
     }
   }
 })

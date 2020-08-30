@@ -1,34 +1,40 @@
 import React from 'react';
 import styled from "@emotion/styled"
-import { Heading, mediaMaxWidth, Description } from '../../style';
+import { mediaMaxWidth } from '../../style';
 import { images } from '../common/images';
-import Img from "gatsby-image"
+import Img, { FluidObject } from "gatsby-image"
 import Layout from "../../components/layout"
 import PrimaryButton from '../common/primaryButton';
+import { Description, Heading } from '../common/text';
+import { intl } from '../../i18n';
 
-const WorkTemplate = () => {
+interface Props {
+  id: string,
+  coverPhoto: FluidObject | FluidObject[]
+  buttonType: ButtonType
+}
+
+export enum ButtonType {
+  downLoad = "downLoad",
+  officialSite = "officialSite"
+}
+
+const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
   return (
     <Layout>
       <Container>
         <HeadingContainer>
-          <Heading>apole</Heading>
+          <Heading id={`works.${id}.title`} />
         </HeadingContainer>
-        {/* <Img fixed={[
-          images().coverApole.childImageSharp.fixed,
-          {
-            ...images().coverApole.childImageSharp.fixed,
-            media: `(max-width: ${mediaMaxWidth})`,
-          }
-        ]} /> */}
-        <Img fluid={images().coverApole.childImageSharp.fluid} />
+        <Img fluid={coverPhoto} />
         <DetailContainer>
-          <Description>詳細</Description>
-          <Description style={{ marginTop: "24px" }}>ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、アプリ開発を得意とするソフトウェア開発会社です。ただ作るのではなくユーザーの本質的な課題を見極め、それらの課題を適切なテクノロジーで解決することをお手伝いします。ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、アプリ開発を得意とするソフトウェア開発会社です。ただ作るのではなくユーザーの本質的な課題を見極め、それらの課題を適切なテクノロジーで解決することをお手伝いします。</Description>
+          <Description id="works.detail" />
+          <Description id={`works.${id}.description`} style={{ marginTop: "24px" }} />
           <DownloadButton>
             <PrimaryButton
-              label="ダウンロード"
+              label={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.label` })}
               onClick={() => alert("click")}
-              upperLabel="こちらからダウンロードできます。"
+              upperLabel={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.upperLabel` })}
               style={{ marginTop: "58px" }}
             />
           </DownloadButton>

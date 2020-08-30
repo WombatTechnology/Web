@@ -12,9 +12,9 @@ const Works = () => {
   return (
     <Section id="works" title="Works">
       <WorkItems>
-        <WorkItem id={"sokkuri"} title={"そっくり度診断"} image={images().sokkuri} />
-        <WorkItem id={"apole"} title={"日程調整アプリapole"} image={images().apole} />
-        <WorkItem id={"persona"} title={"PERSONA!"} image={images().persona} />
+        <WorkItem id={"sokkuri"} image={images().sokkuri} />
+        <WorkItem id={"apole"} image={images().apole} />
+        <WorkItem id={"persona"} image={images().persona} />
       </WorkItems>
     </Section>
   )

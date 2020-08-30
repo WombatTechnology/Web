@@ -34,7 +34,7 @@ const Contact = () => {
         errorCallback={(error) => { alert(error) /* TODO Handle Error */ }}
       />
       {
-        true && <ThankYouModal closeModal={() => setThankYou(false)} />
+        showThankYou && <ThankYouModal closeModal={() => setThankYou(false)} />
       }
     </Section>
   )

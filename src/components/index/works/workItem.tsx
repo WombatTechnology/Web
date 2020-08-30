@@ -1,22 +1,23 @@
 import React from "react"
-import Img from "gatsby-image"
+import Img, { FixedObject } from "gatsby-image"
 import styled from "@emotion/styled"
-import { SubTitle, SmallDescription, Spacer, mediaMaxWidth } from "../../../style"
+import { SmallDescription, Spacer, mediaMaxWidth } from "../../../style"
+import { SubTitle } from "../../common/text"
 
 interface WorkItemProps {
   id: string
-  title: string
-  image: Image
+  image: FixedObject | FixedObject[]
 }
 
-const WorkItem = ({ id, title, image }: WorkItemProps) => {
+
+const WorkItem = ({ id, image }: WorkItemProps) => {
   return (
     <a href="/works/apole">
       <WorkItemContainer>
         <ImageContainer>
           <Img fixed={image.childImageSharp.fixed} />
         </ImageContainer>
-        <SubTitle>{title}</SubTitle>
+        <SubTitle id={`works.${id}.title`} style={{ marginTop: "24px" }} />
       </WorkItemContainer>
     </a>
   )

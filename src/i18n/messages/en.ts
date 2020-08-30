@@ -69,5 +69,26 @@ export default flatten({
         }
       }
     }
+  },
+  "works": {
+    "detail": "詳細",
+    "apole": {
+      "title": "apole",
+      "description": "apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文"
+    },
+    "sokkuri": {
+      "title": "AI Face Match",
+      "description": "そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断"
+    },
+    "persona": {
+      "title": "PERSONA!",
+      "description": "ペルソナ ペルソナ "
+    },
+    "buttons": {
+      "downLoad": {
+        "upperLabel": "Download from here",
+        "label": "Download"
+      }
+    }
   }
 })

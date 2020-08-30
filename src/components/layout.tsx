@@ -16,7 +16,6 @@ interface Props {
   children: ReactNode
 }
 const Layout = ({ children }: Props) => {
-  const lang = "en"
   return (
     <IntlProvider messages={messages[lang]} locale={lang} defaultLocale="en">
       <Header />
