@@ -80,6 +80,7 @@ const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: ${mediaMaxWidth}) { padding: 0 }
 `
 const MenuLinks = styled.div`
   width: 600px;

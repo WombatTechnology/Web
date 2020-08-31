@@ -32,7 +32,7 @@ const EyeCatch = () => {
 const Background = styled.div`
   height: calc(100vh - 90px);
   @media (max-width: ${mediaMaxWidth}) {
-    height: ${({ height }) => `calc(${height}px - 62px)`}
+    height: 500px;
   }
   background-color: ${Colors.BaseGray};
   width: 100%;
@@ -58,6 +58,9 @@ const ScrollButtonContainer = styled.div`
   bottom: 20px;
   left: calc(50% - 26px);
   cursor: pointer;
+  @media (max-width: ${mediaMaxWidth}) {
+    display: none;
+  }
 `
 
 export default EyeCatch
