@@ -14,7 +14,8 @@ import { IntlProvider, createIntl, createIntlCache } from 'react-intl'
 
 interface Props {
   children: ReactNode,
-  locale: string
+  locale: string,
+  showHeaderMenu: boolean
 }
 
 // 子コンポーネントで
@@ -23,7 +24,7 @@ interface Props {
 // の形で利用する。
 export const IntlContext = React.createContext(null)
 
-const Layout = ({ children, locale }: Props) => {
+const Layout = ({ children, locale, showHeaderMenu }: Props) => {
   // localeからintl生成
   const cache = createIntlCache()
   const intl = createIntl(

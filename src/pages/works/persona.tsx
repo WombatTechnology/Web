@@ -7,9 +7,9 @@ export default ({ pathContext: { locale } }) => {
   return (
     <Layout locale={locale} showHeaderMenu={false}>
       <WorkTemplate
-        id="sokkuri"
-        coverPhoto={images().coverSokkuri.childImageSharp.fluid}
-        buttonType={ButtonType.downLoad}
+        id="persona"
+        coverPhoto={images().coverPersona.childImageSharp.fluid}
+        buttonType={ButtonType.officialSite}
       />
     </Layout>
   )

@@ -36,7 +36,6 @@ const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8px;
 `
 
 const Label = styled.span`

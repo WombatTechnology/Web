@@ -16,7 +16,7 @@ import Company from "../components/index/company"
 
 const IndexPage = ({ pathContext: { locale } }) => {
   return (
-    <Layout locale={locale}>
+    <Layout locale={locale} showHeaderMenu>
       <SEO />
       <EyeCatch />
       <About />

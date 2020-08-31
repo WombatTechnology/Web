@@ -25,7 +25,7 @@ const Footer = () => {
 const Background = styled.footer`
   height: 90px;
   background-color: ${Colors.White};
-  width: 980px;
+  padding: 0 60px;
   margin: auto;
   margin-top: 16px;
   display: flex;

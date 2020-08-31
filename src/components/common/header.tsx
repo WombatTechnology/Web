@@ -9,8 +9,12 @@ import FocusLock from 'react-focus-lock';
 import Burger from "./burger"
 import Menu from "./menu"
 import { useOnClickOutside } from "../../hooks"
+import LocaleLink from "./localeLink"
 
-const Header = () => {
+interface Props {
+  showHeaderMenu: boolean
+}
+const Header = ({ showHeaderMenu }: Props) => {
   const [open, setOpen] = useState(false);
   const menuId = "main-menu";
   const node = useRef();
@@ -20,7 +24,7 @@ const Header = () => {
   return (
     <Background>
       <Container>
-        <a href="/">
+        <LocaleLink to={"/"}>
           <Img fixed={
             [
               images().headerLogoPC.childImageSharp.fixed,
@@ -29,24 +33,28 @@ const Header = () => {
                 media: `(max-width: ${mediaMaxWidth})`,
               }
             ]} />
-        </a>
-        <MenuLinks>
-          <ScrollIntoView selector="#about">
-            <MenuLink>About</MenuLink>
-          </ScrollIntoView>
-          <ScrollIntoView selector="#service">
-            <MenuLink>Service</MenuLink>
-          </ScrollIntoView>
-          <ScrollIntoView selector="#works">
-            <MenuLink>Works</MenuLink>
-          </ScrollIntoView>
-          <ScrollIntoView selector="#company">
-            <MenuLink>Company</MenuLink>
-          </ScrollIntoView>
-          <ScrollIntoView selector="#contact">
-            <MenuLink>Contact</MenuLink>
-          </ScrollIntoView>
-        </MenuLinks>
+        </LocaleLink>
+        {
+          showHeaderMenu && (
+            <MenuLinks>
+              <ScrollIntoView selector="#about">
+                <MenuLink>About</MenuLink>
+              </ScrollIntoView>
+              <ScrollIntoView selector="#service">
+                <MenuLink>Service</MenuLink>
+              </ScrollIntoView>
+              <ScrollIntoView selector="#works">
+                <MenuLink>Works</MenuLink>
+              </ScrollIntoView>
+              <ScrollIntoView selector="#company">
+                <MenuLink>Company</MenuLink>
+              </ScrollIntoView>
+              <ScrollIntoView selector="#contact">
+                <MenuLink>Contact</MenuLink>
+              </ScrollIntoView>
+            </MenuLinks>
+          )
+        }
         {/* 現状Menuは不要 */}
         {/* <SPMenu>
           <FocusLock disabled={!open}>

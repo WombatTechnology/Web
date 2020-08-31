@@ -6,7 +6,7 @@ import Layout from "../../components/layout"
 export default ({ pathContext: { locale } }) => {
 
   return (
-    <Layout locale={locale}>
+    <Layout locale={locale} showHeaderMenu={false}>
       <WorkTemplate
         id="apole"
         coverPhoto={images().coverApole.childImageSharp.fluid}

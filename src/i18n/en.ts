@@ -74,22 +74,27 @@ export default flatten({
     "detail": "詳細",
     "apole": {
       "title": "apole",
-      "description": "apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文",
+      "description": "A keyboard application for iOS that allows users to input text, view and create appointments while viewing messages on Messenger Apps. Originally a product developed by CEO Matsumoto.",
       "href": "https://apps.apple.com/app/apole-keyboard-calendar/id1500285877"
     },
     "sokkuri": {
       "title": "AI Face Match",
-      "description": "そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断",
+      "description": "This is an entertainment app for iOS that allows the AI to determine how similar two people's faces are to each other. It's a lot of fun to do with friends and family.",
       "href": "https://apps.apple.com/app/%E3%81%9D%E3%81%A3%E3%81%8F%E3%82%8A%E5%BA%A6%E8%A8%BA%E6%96%AD-2%E4%BA%BA%E3%81%AE%E9%A1%94%E3%81%AF%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E4%BC%BC%E3%81%A6%E3%81%84%E3%82%8B/id1516163819"
     },
     "persona": {
-      "title": "PERSONA!",
-      "description": "ペルソナ ペルソナ "
+      "title": "PERSONA!(α)",
+      "description": "A service that allows you to directly interview personas for new services and marketing.",
+      "href": "https://persona-app.studio.design/"
     },
     "buttons": {
       "downLoad": {
         "upperLabel": "Download from here",
         "label": "Download"
+      },
+      "officialSite": {
+        "upperLabel": "Details here",
+        "label": "Official Site"
       }
     }
   }

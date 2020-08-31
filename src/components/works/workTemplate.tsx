@@ -29,7 +29,7 @@ const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
       <Img fluid={coverPhoto} />
       <DetailContainer>
         <Description id="works.detail" />
-        <Description id={`works.${id}.description`} style={{ marginTop: "24px" }} />
+        <Description id={`works.${id}.description`} style={{ marginTop: "4px" }} />
         <DownloadButton href={intl.formatMessage({ id: `works.${id}.href` })} >
           <PrimaryButton
             label={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.label` })}
@@ -44,7 +44,7 @@ const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
 
 const Container = styled.section``
 const HeadingContainer = styled.div`
-  margin: 16px 0 32px 80px;
+  margin: 16px 0 32px 122px;
   @media (max-width: ${mediaMaxWidth}) {
     margin: 16px 0 32px 20px;
   }

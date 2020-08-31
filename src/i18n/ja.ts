@@ -74,18 +74,27 @@ export default flatten({
     "detail": "詳細",
     "apole": {
       "title": "apole",
-      "description": "apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文apoleの説明文",
+      "description": "日程調整を劇的に便利にするiOS向けのキーボードアプリケーション。LINEやFBメッセンジャーなどでメッセージを見ながら日時のテキストの入力、予定の表示、作成などが行えます。元々はCEO松本の個人開発プロダクト。",
       "href": "https://apps.apple.com/jp/app/apole-keyboard-calendar/id1500285877"
     },
     "sokkuri": {
       "title": "そっくり度診断",
-      "description": "そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断そっくり度診断",
+      "description": "2人の顔はどのくらい似てるかをAIが判定してくれるiOS向けのエンタメアプリ。友達や家族とやると盛り上がります。",
       "href": "https://apps.apple.com/jp/app/%E3%81%9D%E3%81%A3%E3%81%8F%E3%82%8A%E5%BA%A6%E8%A8%BA%E6%96%AD-2%E4%BA%BA%E3%81%AE%E9%A1%94%E3%81%AF%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E4%BC%BC%E3%81%A6%E3%81%84%E3%82%8B/id1516163819"
+    },
+    "persona": {
+      "title": "PERSONA!(α)",
+      "description": "新規サービスやマーケティングなどのペルソナに直接インタビューできるサービス。α運用中",
+      "href": "https://persona-app.studio.design/"
     },
     "buttons": {
       "downLoad": {
-        "upperLabel": "ダウンロードはこちら",
+        "upperLabel": "こちらからダウンロードできます",
         "label": "ダウンロード"
+      },
+      "officialSite": {
+        "upperLabel": "詳細はこちら",
+        "label": "公式サイトへ"
       }
     }
   }

@@ -89,6 +89,13 @@ export const images = () => {
           }
         }
       }
+      coverSokkuri: file(relativePath: { eq: "works/cover_sokkuri.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1070) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
       apole: file(relativePath: { eq: "works/apole.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {
@@ -107,6 +114,13 @@ export const images = () => {
         childImageSharp {
           fixed(width: 268, height: 234) {
             ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      coverPersona: file(relativePath: { eq: "works/cover_persona.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1070) {
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
