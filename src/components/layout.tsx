@@ -26,11 +26,10 @@ export const IntlContext = React.createContext(null)
 const Layout = ({ children, locale }: Props) => {
   // localeからintl生成
   const cache = createIntlCache()
-  const lang = navigator.language
   const intl = createIntl(
     {
       // 言語
-      locale: lang,
+      locale: locale,
       // デフォルトの言語
       defaultLocale: 'en',
       // Cache

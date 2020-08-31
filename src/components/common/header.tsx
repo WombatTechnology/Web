@@ -75,7 +75,8 @@ const Background = styled.header`
   }
 `
 const Container = styled.nav`
-  width: ${ContainerWidth};
+  width: 100%;
+  padding: 0 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;

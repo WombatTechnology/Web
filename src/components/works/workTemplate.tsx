@@ -11,7 +11,7 @@ import { IntlContext } from 'react-intl';
 interface Props {
   id: string,
   coverPhoto: FluidObject | FluidObject[]
-  buttonType: ButtonType
+  buttonType: ButtonType,
 }
 
 export enum ButtonType {
@@ -21,27 +21,24 @@ export enum ButtonType {
 
 const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
   const intl = useContext(IntlContext)
-
   return (
-    <Layout>
-      <Container>
-        <HeadingContainer>
-          <Heading id={`works.${id}.title`} />
-        </HeadingContainer>
-        <Img fluid={coverPhoto} />
-        <DetailContainer>
-          <Description id="works.detail" />
-          <Description id={`works.${id}.description`} style={{ marginTop: "24px" }} />
-          <DownloadButton href={intl.formatMessage({ id: `works.${id}.href` })} >
-            <PrimaryButton
-              label={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.label` })}
-              upperLabel={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.upperLabel` })}
-              style={{ marginTop: "58px" }}
-            />
-          </DownloadButton>
-        </DetailContainer>
-      </Container>
-    </Layout>
+    <Container>
+      <HeadingContainer>
+        <Heading id={`works.${id}.title`} />
+      </HeadingContainer>
+      <Img fluid={coverPhoto} />
+      <DetailContainer>
+        <Description id="works.detail" />
+        <Description id={`works.${id}.description`} style={{ marginTop: "24px" }} />
+        <DownloadButton href={intl.formatMessage({ id: `works.${id}.href` })} >
+          <PrimaryButton
+            label={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.label` })}
+            upperLabel={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.upperLabel` })}
+            style={{ marginTop: "58px" }}
+          />
+        </DownloadButton>
+      </DetailContainer>
+    </Container>
   )
 }
 
