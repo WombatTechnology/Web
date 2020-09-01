@@ -41,7 +41,7 @@ const Layout = ({ children, locale, showHeaderMenu }: Props) => {
   return (
     <IntlContext.Provider value={intl}>
       <IntlProvider messages={messages[locale]} locale={locale} defaultLocale="ja">
-        <Header />
+        <Header showHeaderMenu={showHeaderMenu} />
         <main>{children}</main>
         <Footer />
       </IntlProvider>
