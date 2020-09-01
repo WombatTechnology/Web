@@ -12,8 +12,8 @@ const Works = () => {
   return (
     <Section id="works" title="Works">
       <WorkItems>
-        <WorkItem id={"sokkuri"} image={images().sokkuri} />
         <WorkItem id={"apole"} image={images().apole} />
+        <WorkItem id={"sokkuri"} image={images().sokkuri} />
         <WorkItem id={"persona"} image={images().persona} />
       </WorkItems>
     </Section>

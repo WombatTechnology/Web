@@ -13,11 +13,12 @@ import '../globalStyle.css'
 import '../reset.css'
 import styled from "@emotion/styled"
 import Company from "../components/index/company"
+import MetaHeader from "../components/common/metaHeader"
 
 const IndexPage = ({ pathContext: { locale } }) => {
   return (
     <Layout locale={locale} showHeaderMenu>
-      <SEO />
+      <MetaHeader title="ウォンバットテクノロジー" />
       <EyeCatch />
       <About />
       <Service />

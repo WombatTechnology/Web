@@ -38,7 +38,7 @@ export default flatten({
           },
           "capital": {
             "label": "資本金",
-            "value": "1,000,000"
+            "value": "1,000,000円"
           },
           "establishmentDate": {
             "label": "設立日",

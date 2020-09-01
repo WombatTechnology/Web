@@ -38,7 +38,7 @@ export default flatten({
           },
           "capital": {
             "label": "Capital",
-            "value": "1,000,000"
+            "value": "1,000,000 JPY"
           },
           "establishmentDate": {
             "label": "Establishment date",
