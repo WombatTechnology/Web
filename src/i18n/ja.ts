@@ -1,6 +1,17 @@
 import flatten from 'flat'
 
 export default flatten({
+  "siteMetaData": {
+    title: `株式会社ウォンバットテクノロジー`,
+    titleTemplate: `株式会社ウォンバットテクノロジー - %s"`,
+    url: `https://wombat-tech.com`,
+    // TODO: OG差し替え
+    image: `/og.png`,
+    description: `株式会社ウォンバットテクノロジーのホームページです。`,
+    social: {
+      twitter: `apole_scheduler`,
+    },
+  },
   "pages": {
     "index": {
       "about": {

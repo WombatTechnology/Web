@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, mediaMaxWidth, BrForSp } from "../../style"
@@ -6,19 +6,33 @@ import "./scrollButton.css"
 import ScrollIntoView from 'react-scroll-into-view'
 import { images } from '../common/images'
 import useWindowDimensions from "../../models/hooks/useWindowDimentions"
+import { IntlContext } from "react-intl"
 
 const EyeCatch = () => {
   const { height } = useWindowDimensions();
+  const intl = useContext(IntlContext)
 
   return (
     <Background height={height}>
-      <Img fixed={[
-        images().mainLogoPC.childImageSharp.fixed,
-        {
-          ...images().mainLogoSP.childImageSharp.fixed,
-          media: `(max-width: ${mediaMaxWidth})`,
-        }
-      ]} />
+      {
+        intl.locale == "ja" ? (
+          <Img fixed={[
+            images().mainLogoPC.childImageSharp.fixed,
+            {
+              ...images().mainLogoSP.childImageSharp.fixed,
+              media: `(max-width: ${mediaMaxWidth})`,
+            }
+          ]} />
+        ) : (
+            <Img fixed={[
+              images().mainLogoENPC.childImageSharp.fixed,
+              {
+                ...images().mainLogoENSP.childImageSharp.fixed,
+                media: `(max-width: ${mediaMaxWidth})`,
+              }
+            ]} />
+          )
+      }
       {/* <Message>日々の悩みを<BrForSp />テクノロジーの力で解決する</Message> */}
       <ScrollIntoView selector="#about">
         <ScrollButtonContainer>

@@ -1,6 +1,16 @@
 import flatten from 'flat'
 
 export default flatten({
+  "siteMetaData": {
+    title: `Wombat Technology Corporation`,
+    titleTemplate: `Wombat Technology, Inc.-%s"`,
+    url: `https://wombat-tech.com/en`,
+    image: `/og_en.png`,
+    description: `The homepage of Wombat Technology, Inc. `,
+    social: {
+      twitter: `apole_scheduler`,
+    },
+  },
   "pages": {
     "index": {
       "about": {

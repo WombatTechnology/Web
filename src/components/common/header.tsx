@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useContext } from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Colors, ContainerWidth, mediaMaxWidth } from "../../style"
@@ -10,6 +10,7 @@ import Burger from "./burger"
 import Menu from "./menu"
 import { useOnClickOutside } from "../../hooks"
 import LocaleLink from "./localeLink"
+import { IntlContext } from "react-intl"
 
 interface Props {
   showHeaderMenu: boolean
@@ -18,6 +19,7 @@ const Header = ({ showHeaderMenu }: Props) => {
   const [open, setOpen] = useState(false);
   const menuId = "main-menu";
   const node = useRef();
+  const intl = useContext(IntlContext)
 
   useOnClickOutside(node, () => setOpen(false));
 
@@ -25,14 +27,27 @@ const Header = ({ showHeaderMenu }: Props) => {
     <Background>
       <Container>
         <LocaleLink to={"/"}>
-          <Img fixed={
-            [
-              images().headerLogoPC.childImageSharp.fixed,
-              {
-                ...images().headerLogoSP.childImageSharp.fixed,
-                media: `(max-width: ${mediaMaxWidth})`,
-              }
-            ]} />
+          {
+            intl.locale == "ja" ? (
+              <Img fixed={
+                [
+                  images().headerLogoPC.childImageSharp.fixed,
+                  {
+                    ...images().headerLogoSP.childImageSharp.fixed,
+                    media: `(max-width: ${mediaMaxWidth})`,
+                  }
+                ]} />
+            ) : (
+                <Img fixed={
+                  [
+                    images().headerLogoENPC.childImageSharp.fixed,
+                    {
+                      ...images().headerLogoENSP.childImageSharp.fixed,
+                      media: `(max-width: ${mediaMaxWidth})`,
+                    }
+                  ]} />
+              )
+          }
         </LocaleLink>
         {
           showHeaderMenu && (

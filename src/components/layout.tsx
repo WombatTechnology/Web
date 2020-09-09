@@ -19,7 +19,7 @@ interface Props {
 }
 
 // 子コンポーネントで
-// const intl = useCOntext(IntlContext)
+// const intl = useContext(IntlContext)
 // intl.formatMessage({ id: `id` })
 // の形で利用する。
 export const IntlContext = React.createContext(null)

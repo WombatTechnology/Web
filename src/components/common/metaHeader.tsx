@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes, { string } from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { IntlContext } from "react-intl"
 
 interface Props {
   title: string
@@ -20,30 +21,16 @@ interface Props {
 
 // TODO: 多言語化
 function MetaHeader({ title, description, lang, meta, keywords }: Props) {
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            image
-            description
-          }
-        }
-      }
-    `
-  )
+  const intl = useContext(IntlContext)
 
-  const metaDescription = description || siteMetadata.description
+  const metaDescription = description || intl.formatMessage({ id: `description` })
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${siteMetadata.title}`}
+      title={title || intl.formatMessage({ id: `siteMetaData.title` })}
+      titleTemplate={`%s | ${intl.formatMessage({ id: `siteMetaData.titleTemplate` })}`}
       meta={[
         {
           name: `description`,
@@ -63,15 +50,15 @@ function MetaHeader({ title, description, lang, meta, keywords }: Props) {
         },
         {
           property: "og:image",
-          content: siteMetadata.image,
+          content: intl.formatMessage({ id: `siteMetaData.image` }),
         },
         {
           property: "og:site_name",
-          content: "ウォンバットテクノロジー株式会社",
+          content: intl.formatMessage({ id: `siteMetaData.title` }),
         },
         {
           property: "og:url",
-          content: "https://wombat-tech.com",
+          content: intl.formatMessage({ id: `siteMetaData.url` }),
         },
         // {
         //   name: "twitter:card",

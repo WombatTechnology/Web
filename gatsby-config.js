@@ -5,6 +5,7 @@ module.exports = {
     url: `https://wombat-tech.com`,
     // TODO: OG差し替え
     image: `/og.png`,
+    imageEn: '/og_en.png',
     description: `株式会社ウォンバットテクノロジーのホームページです。`,
     social: {
       twitter: `apole_scheduler`,

@@ -40,6 +40,20 @@ export const images = () => {
           }
         }
       }
+      headerLogoENPC: file(relativePath: { eq: "header-logo-en.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 60) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      headerLogoENSP: file(relativePath: { eq: "header-logo-en.png" }) {
+        childImageSharp {
+          fixed(width: 108, height: 32) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       mainLogoPC: file(relativePath: { eq: "main-logo.png" }) {
         childImageSharp {
           fixed(width: 279, height: 281) {
@@ -50,6 +64,20 @@ export const images = () => {
       mainLogoSP: file(relativePath: { eq: "main-logo.png" }) {
         childImageSharp {
           fixed(width: 197, height: 199) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mainLogoENPC: file(relativePath: { eq: "main-logo-en.png" }) {
+        childImageSharp {
+          fixed(height: 281) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mainLogoENSP: file(relativePath: { eq: "main-logo-en.png" }) {
+        childImageSharp {
+          fixed(height: 199) {
             ...GatsbyImageSharpFixed
           }
         }
