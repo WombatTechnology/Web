@@ -138,6 +138,20 @@ export const images = () => {
           }
         }
       }
+      nitte: file(relativePath: { eq: "works/nitte.png" }) {
+        childImageSharp {
+          fixed(width: 268, height: 234) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      coverNitte: file(relativePath: { eq: "works/cover_nitte.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1070) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
       persona: file(relativePath: { eq: "works/persona.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {

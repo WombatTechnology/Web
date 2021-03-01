@@ -88,6 +88,11 @@ export default flatten({
       "description": "日程調整を劇的に便利にするiOS向けのキーボードアプリケーション。LINEやFBメッセンジャーなどでメッセージを見ながら日時のテキストの入力、予定の表示、作成などが行えます。元々はCEO松本の個人開発プロダクト。",
       "href": "https://apps.apple.com/jp/app/apole-keyboard-calendar/id1500285877"
     },
+    "nitte": {
+      "title": "Nitte",
+      "description": "複数人調整もカンタン、営業マンのための日程調整サービス",
+      "href": "https://site.nitte.app/"
+    },
     "sokkuri": {
       "title": "そっくり度診断",
       "description": "2人の顔はどのくらい似てるかをAIが判定してくれるiOS向けのエンタメアプリ。友達や家族とやると盛り上がります。",
