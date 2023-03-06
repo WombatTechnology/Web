@@ -152,20 +152,6 @@ export const images = () => {
           }
         }
       }
-      persona: file(relativePath: { eq: "works/persona.png" }) {
-        childImageSharp {
-          fixed(width: 268, height: 234) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      coverPersona: file(relativePath: { eq: "works/cover_persona.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1070) {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
       thankyou: file(relativePath: { eq: "thankyou.png" }) {
         childImageSharp {
           fixed(width: 247, height: 299) {

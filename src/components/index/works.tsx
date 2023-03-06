@@ -13,8 +13,7 @@ const Works = () => {
       <WorkItems>
         <WorkItem id={"nitte"} image={images().nitte} />
         <WorkItem id={"apole"} image={images().apole} />
-        <WorkItem id={"sokkuri"} image={images().sokkuri} />
-        <WorkItem id={"persona"} image={images().persona} />
+        {/* <WorkItem id={"sokkuri"} image={images().sokkuri} /> */}
       </WorkItems>
     </Section>
   )
@@ -22,7 +21,6 @@ const Works = () => {
 
 const WorkItems = styled.div`
   display: flex;
-  justify-content: space-between;
   margin-top: 53px;
   @media (max-width: ${mediaMaxWidth}) {
     flex-direction: column;
