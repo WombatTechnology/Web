@@ -60,7 +60,7 @@ export default flatten({
           },
           "place": {
             "label": "Location",
-            "value": "Iago Building 4F, 3-12-1 Higashi Ueno, Taito-ku, Tokyo, 110-0015, Japan"
+            "value": "150-0002 Miya Masaka Building 609 2-19-15 Shibuya, Shibuya-ku Tokyo-to, Japan"
           }
         }
       },
