@@ -16,29 +16,11 @@ export default flatten({
     "index": {
       "about": {
         "subtitle": "わたしたちについて",
-        "description": "ウォンバットテクノロジーはUI/UXデザインも含め一気通貫のWeb、アプリケーション開発を得意とするソフトウェア開発会社です。ただ作るのではなくユーザーの本質的な課題を見極め、それらの課題を適切なテクノロジーで解決することをお手伝いします。"
+        "description": "ウォンバットテクノロジーはUI/UXデザインも含めた一気通貫のWeb、アプリケーション開発を得意とするソフトウェア開発会社です。ユーザーの本質的な課題を見極め、適切なテクノロジーで解決します。"
       },
       "service": {
         "subtitle": "サービス",
-        "description": "言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。デザインも含めたアプリ、Webサービス開発を請け負います。",
-        "items": {
-          "app": {
-            "title": "アプリ開発",
-            "description": "スマートフォンアプリの企画・開発を行います。"
-          },
-          "web": {
-            "title": "WEBシステム開発",
-            "description": "WEBシステムの開発を行います。"
-          },
-          "uiUx": {
-            "title": "UI/UXデザイン",
-            "description": "使いやすいユーザー体験を作ります。"
-          }
-        }
-      },
-      "works": {
-        "subtitle": "実績",
-        "description": "言語、フレームワーク問わず、ウェブアプリケーションからネイティブアプリケーション開発まで。デザインも含めたアプリ、Webサービス開発を請け負います。",
+        "description": "日程調整ツール「Nitte」を開発、運用しています。",
       },
       "company": {
         "subtitle": "会社情報",
@@ -46,10 +28,6 @@ export default flatten({
           "companyName": {
             "label": "社名",
             "value": "株式会社ウォンバットテクノロジー"
-          },
-          "capital": {
-            "label": "資本金",
-            "value": "1,000,000円"
           },
           "establishmentDate": {
             "label": "設立日",
@@ -81,17 +59,17 @@ export default flatten({
       }
     },
   },
-  "works": {
+  "services": {
     "detail": "詳細",
-    "apole": {
-      "title": "apole",
-      "description": "日程調整を劇的に便利にするiOS向けのキーボードアプリケーション。LINEやFBメッセンジャーなどでメッセージを見ながら日時のテキストの入力、予定の表示、作成などが行えます。元々はCEO松本の個人開発プロダクト。",
-      "href": "https://apps.apple.com/jp/app/apole-keyboard-calendar/id1500285877"
-    },
     "nitte": {
       "title": "Nitte",
       "description": "複数人調整もカンタン、営業マンのための日程調整サービス",
       "href": "https://site.nitte.app/"
+    },
+    "nitte-recruit": {
+      "title": "Nitte 人材紹介",
+      "description": "企業と求職者専用の日程調整ツール",
+      "href": "https://site.nitte.app/recruit"
     },
     "sokkuri": {
       "title": "そっくり度診断",

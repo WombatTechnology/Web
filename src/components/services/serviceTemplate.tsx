@@ -1,12 +1,10 @@
-import React, { useContext } from 'react';
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
+import Img, { FluidObject } from "gatsby-image";
+import { useContext } from 'react';
+import { IntlContext } from 'react-intl';
 import { mediaMaxWidth } from '../../style';
-import { images } from '../common/images';
-import Img, { FluidObject } from "gatsby-image"
-import Layout from "../../components/layout"
 import PrimaryButton from '../common/primaryButton';
 import { Description, Heading } from '../common/text';
-import { IntlContext } from 'react-intl';
 
 interface Props {
   id: string,
@@ -19,21 +17,21 @@ export enum ButtonType {
   officialSite = "officialSite"
 }
 
-const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
+const ServiceTemplate = ({ id, coverPhoto, buttonType }: Props) => {
   const intl = useContext(IntlContext)
   return (
     <Container>
       <HeadingContainer>
-        <Heading id={`works.${id}.title`} />
+        <Heading id={`services.${id}.title`} />
       </HeadingContainer>
       <Img fluid={coverPhoto} />
       <DetailContainer>
-        <Description id="works.detail" />
-        <Description id={`works.${id}.description`} style={{ marginTop: "4px" }} />
-        <DownloadButton href={intl.formatMessage({ id: `works.${id}.href` })} >
+        <Description id="services.detail" />
+        <Description id={`services.${id}.description`} style={{ marginTop: "4px" }} />
+        <DownloadButton href={intl.formatMessage({ id: `services.${id}.href` })} >
           <PrimaryButton
-            label={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.label` })}
-            upperLabel={intl.formatMessage({ id: `works.buttons.${ButtonType[buttonType]}.upperLabel` })}
+            label={intl.formatMessage({ id: `services.buttons.${ButtonType[buttonType]}.label` })}
+            upperLabel={intl.formatMessage({ id: `services.buttons.${ButtonType[buttonType]}.upperLabel` })}
             style={{ marginTop: "58px" }}
           />
         </DownloadButton>
@@ -44,13 +42,13 @@ const WorkTemplate = ({ id, coverPhoto, buttonType }: Props) => {
 
 const Container = styled.section``
 const HeadingContainer = styled.div`
-  margin: 16px 0 32px 122px;
+  margin: 16px 0 32px 40px;
   @media (max-width: ${mediaMaxWidth}) {
     margin: 16px 0 32px 20px;
   }
 `
 const DetailContainer = styled.section`
-  padding: 40px 122px;
+  padding: 40px 40px;
   @media (max-width: ${mediaMaxWidth}) {
     padding: 40px 24px;
   }
@@ -64,4 +62,4 @@ const DownloadButton = styled.a`
   }
 `
 
-export default WorkTemplate
+export default ServiceTemplate

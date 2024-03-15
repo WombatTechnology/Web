@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 
 
 
@@ -110,42 +110,56 @@ export const images = () => {
           }
         }
       }
-      sokkuri: file(relativePath: { eq: "works/sokkuri.png" }) {
+      sokkuri: file(relativePath: { eq: "services/sokkuri.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      coverSokkuri: file(relativePath: { eq: "works/cover_sokkuri.png" }) {
+      coverSokkuri: file(relativePath: { eq: "services/cover_sokkuri.png" }) {
         childImageSharp {
           fluid(maxWidth: 1070) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
-      apole: file(relativePath: { eq: "works/apole.png" }) {
+      apole: file(relativePath: { eq: "services/apole.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      coverApole: file(relativePath: { eq: "works/cover_apole.png" }) {
+      coverApole: file(relativePath: { eq: "services/cover_apole.png" }) {
         childImageSharp {
           fluid(maxWidth: 1070) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
-      nitte: file(relativePath: { eq: "works/nitte.png" }) {
+      nitte: file(relativePath: { eq: "services/nitte.png" }) {
         childImageSharp {
           fixed(width: 268, height: 234) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      coverNitte: file(relativePath: { eq: "works/cover_nitte.png" }) {
+      coverNitte: file(relativePath: { eq: "services/cover_nitte.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1070) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+      nitteRecruit: file(relativePath: { eq: "services/nitte-recruit.png" }) {
+        childImageSharp {
+          fixed(width: 268, height: 234) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      coverNitteRecruit: file(relativePath: { eq: "services/cover_nitte_recruit.png" }) {
         childImageSharp {
           fluid(maxWidth: 1070) {
             ...GatsbyImageSharpFluid_noBase64

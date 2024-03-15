@@ -1,31 +1,27 @@
-import React from "react"
-import Img, { FixedObject } from "gatsby-image"
 import styled from "@emotion/styled"
+import Img, { FixedObject } from "gatsby-image"
 import { mediaMaxWidth } from "../../../style"
-import { SubTitle } from "../../common/text"
-import { Link } from "gatsby"
 import LocaleLink from "../../common/localeLink"
 
-interface WorkItemProps {
+interface ServiceItemProps {
   id: string
   image: FixedObject | FixedObject[]
 }
 
 
-const WorkItem = ({ id, image }: WorkItemProps) => {
+const ServiceItem = ({ id, image }: ServiceItemProps) => {
   return (
-    <LocaleLink to={"/works/" + id} >
-      <WorkItemContainer>
+    <LocaleLink to={"/services/" + id} >
+      <ServiceItemContainer>
         <ImageContainer>
           <Img fixed={image.childImageSharp.fixed} />
         </ImageContainer>
-        <SubTitle id={`works.${id}.title`} style={{ marginTop: "24px" }} />
-      </WorkItemContainer>
+      </ServiceItemContainer>
     </LocaleLink >
   )
 }
 
-const WorkItemContainer = styled.div`
+const ServiceItemContainer = styled.div`
   width: 268px;
   height: 292px;
   display: flex;
@@ -49,4 +45,4 @@ const ImageContainer = styled.div`
   align-items: center;
 `
 
-export default WorkItem
+export default ServiceItem

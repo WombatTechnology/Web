@@ -1,10 +1,10 @@
-import React, { useContext } from "react"
-import { SubTitle_18_span, mediaMaxWidth, Text_14px_gray, Text_14px, Divider } from "../../style"
-import Section from './section'
 import styled from "@emotion/styled"
-import { images } from "../common/images"
 import Img from "gatsby-image"
+import { useContext } from "react"
+import { Divider, SubTitle_18_span, Text_14px, Text_14px_gray, mediaMaxWidth } from "../../style"
+import { images } from "../common/images"
 import { IntlContext } from "../layout"
+import Section from './section'
 
 const Company = () => {
   const intl = useContext(IntlContext)
@@ -14,7 +14,6 @@ const Company = () => {
   }
   let info = {
     [format("companyName.label")]: format("companyName.value"),
-    [format("capital.label")]: format("capital.value"),
     [format("establishmentDate.label")]: format("establishmentDate.value"),
     [format("ceo.label")]: format("ceo.value"),
     [format("place.label")]: format("place.value"),

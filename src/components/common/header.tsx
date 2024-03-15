@@ -1,16 +1,12 @@
-import { Link } from "gatsby"
-import React, { useState, useRef, useContext } from "react"
-import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Colors, ContainerWidth, mediaMaxWidth } from "../../style"
-import ScrollIntoView from 'react-scroll-into-view'
-import { images } from '../common/images'
-import FocusLock from 'react-focus-lock';
-import Burger from "./burger"
-import Menu from "./menu"
-import { useOnClickOutside } from "../../hooks"
-import LocaleLink from "./localeLink"
+import Img from "gatsby-image"
+import { useContext, useRef, useState } from "react"
 import { IntlContext } from "react-intl"
+import ScrollIntoView from 'react-scroll-into-view'
+import { useOnClickOutside } from "../../hooks"
+import { Colors, mediaMaxWidth } from "../../style"
+import { images } from '../common/images'
+import LocaleLink from "./localeLink"
 
 interface Props {
   showHeaderMenu: boolean
@@ -38,15 +34,15 @@ const Header = ({ showHeaderMenu }: Props) => {
                   }
                 ]} />
             ) : (
-                <Img fixed={
-                  [
-                    images().headerLogoENPC.childImageSharp.fixed,
-                    {
-                      ...images().headerLogoENSP.childImageSharp.fixed,
-                      media: `(max-width: ${mediaMaxWidth})`,
-                    }
-                  ]} />
-              )
+              <Img fixed={
+                [
+                  images().headerLogoENPC.childImageSharp.fixed,
+                  {
+                    ...images().headerLogoENSP.childImageSharp.fixed,
+                    media: `(max-width: ${mediaMaxWidth})`,
+                  }
+                ]} />
+            )
           }
         </LocaleLink>
         {
@@ -57,9 +53,6 @@ const Header = ({ showHeaderMenu }: Props) => {
               </ScrollIntoView>
               <ScrollIntoView selector="#service">
                 <MenuLink>Service</MenuLink>
-              </ScrollIntoView>
-              <ScrollIntoView selector="#works">
-                <MenuLink>Works</MenuLink>
               </ScrollIntoView>
               <ScrollIntoView selector="#company">
                 <MenuLink>Company</MenuLink>
@@ -106,7 +99,7 @@ const Container = styled.nav`
   @media (max-width: ${mediaMaxWidth}) { padding: 0 }
 `
 const MenuLinks = styled.div`
-  width: 600px;
+  width: 500px;
   height: 27px;
   display: flex;
   justify-content: space-between;
